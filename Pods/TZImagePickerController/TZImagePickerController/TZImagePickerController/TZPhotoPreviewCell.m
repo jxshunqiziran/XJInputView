@@ -50,13 +50,15 @@
     self.previewView = [[TZPhotoPreviewView alloc] initWithFrame:CGRectZero];
     __weak typeof(self) weakSelf = self;
     [self.previewView setSingleTapGestureBlock:^{
-        if (weakSelf.singleTapGestureBlock) {
-            weakSelf.singleTapGestureBlock();
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf.singleTapGestureBlock) {
+            strongSelf.singleTapGestureBlock();
         }
     }];
     [self.previewView setImageProgressUpdateBlock:^(double progress) {
-        if (weakSelf.imageProgressUpdateBlock) {
-            weakSelf.imageProgressUpdateBlock(progress);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf.imageProgressUpdateBlock) {
+            strongSelf.imageProgressUpdateBlock(progress);
         }
     }];
     [self addSubview:self.previewView];
@@ -111,6 +113,9 @@
         _scrollView.delaysContentTouches = NO;
         _scrollView.canCancelContentTouches = YES;
         _scrollView.alwaysBounceVertical = NO;
+        if (iOS11Later) {
+            _scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
         [self addSubview:_scrollView];
         
         _imageContainerView = [[UIView alloc] init];
@@ -170,10 +175,10 @@
     
     _asset = asset;
     self.imageRequestID = [[TZImageManager manager] getPhotoWithAsset:asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        if (![asset isEqual:_asset]) return;
+        if (![asset isEqual:self->_asset]) return;
         self.imageView.image = photo;
         [self resizeSubviews];
-        _progressView.hidden = YES;
+        self->_progressView.hidden = YES;
         if (self.imageProgressUpdateBlock) {
             self.imageProgressUpdateBlock(1);
         }
@@ -181,17 +186,17 @@
             self.imageRequestID = 0;
         }
     } progressHandler:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-        if (![asset isEqual:_asset]) return;
-        _progressView.hidden = NO;
-        [self bringSubviewToFront:_progressView];
+        if (![asset isEqual:self->_asset]) return;
+        self->_progressView.hidden = NO;
+        [self bringSubviewToFront:self->_progressView];
         progress = progress > 0.02 ? progress : 0.02;
-        _progressView.progress = progress;
+        self->_progressView.progress = progress;
         if (self.imageProgressUpdateBlock && progress < 1) {
             self.imageProgressUpdateBlock(progress);
         }
         
         if (progress >= 1) {
-            _progressView.hidden = YES;
+            self->_progressView.hidden = YES;
             self.imageRequestID = 0;
         }
     } networkAccessAllowed:YES];
@@ -353,17 +358,17 @@
     }
     
     [[TZImageManager manager] getPhotoWithAsset:self.model.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        _cover = photo;
+        self->_cover = photo;
     }];
     [[TZImageManager manager] getVideoWithAsset:self.model.asset completion:^(AVPlayerItem *playerItem, NSDictionary *info) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            _player = [AVPlayer playerWithPlayerItem:playerItem];
-            _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
-            _playerLayer.backgroundColor = [UIColor blackColor].CGColor;
-            _playerLayer.frame = self.bounds;
-            [self.layer addSublayer:_playerLayer];
+            self->_player = [AVPlayer playerWithPlayerItem:playerItem];
+            self->_playerLayer = [AVPlayerLayer playerLayerWithPlayer:self->_player];
+            self->_playerLayer.backgroundColor = [UIColor blackColor].CGColor;
+            self->_playerLayer.frame = self.bounds;
+            [self.layer addSublayer:self->_playerLayer];
             [self configPlayButton];
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pausePlayerAndShowNaviBar) name:AVPlayerItemDidPlayToEndTimeNotification object:_player.currentItem];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pausePlayerAndShowNaviBar) name:AVPlayerItemDidPlayToEndTimeNotification object:self->_player.currentItem];
         });
     }];
 }
@@ -387,9 +392,7 @@
         if (currentTime.value == durationTime.value) [_player.currentItem seekToTime:CMTimeMake(0, 1)];
         [_player play];
         [_playButton setImage:nil forState:UIControlStateNormal];
-        if (!TZ_isGlobalHideStatusBar && iOS7Later) {
-            [UIApplication sharedApplication].statusBarHidden = YES;
-        }
+        if (iOS7Later) [UIApplication sharedApplication].statusBarHidden = YES;
         if (self.singleTapGestureBlock) {
             self.singleTapGestureBlock();
         }
@@ -421,7 +424,8 @@
     _previewView = [[TZPhotoPreviewView alloc] initWithFrame:CGRectZero];
     __weak typeof(self) weakSelf = self;
     [_previewView setSingleTapGestureBlock:^{
-        [weakSelf signleTapAction];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf signleTapAction];
     }];
     [self addSubview:_previewView];
 }

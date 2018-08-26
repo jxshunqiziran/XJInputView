@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C20B7CCB6A4AE730A084848 /* libPods-XJInputView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7533225A4B384E9340C9F120 /* libPods-XJInputView.a */; };
+		AA831799212FF32A0020B6A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831798212FF32A0020B6A5 /* AppDelegate.m */; };
+		AA83179C212FF32A0020B6A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA83179B212FF32A0020B6A5 /* ViewController.m */; };
+		AA83179F212FF32A0020B6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA83179D212FF32A0020B6A5 /* Main.storyboard */; };
+		AA8317A1212FF3350020B6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8317A0212FF3350020B6A5 /* Assets.xcassets */; };
+		AA8317A4212FF3350020B6A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8317A2212FF3350020B6A5 /* LaunchScreen.storyboard */; };
+		AA8317A7212FF3350020B6A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317A6212FF3350020B6A5 /* main.m */; };
+		AA8317B1212FF3350020B6A5 /* XJInputViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317B0212FF3350020B6A5 /* XJInputViewTests.m */; };
+		AA8317BC212FF3350020B6A5 /* XJInputViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317BB212FF3350020B6A5 /* XJInputViewUITests.m */; };
+		AA8317E8212FF3920020B6A5 /* XJMulitFuctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CA212FF3910020B6A5 /* XJMulitFuctionView.m */; };
+		AA8317E9212FF3920020B6A5 /* XJFaceInputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CB212FF3920020B6A5 /* XJFaceInputHelper.m */; };
+		AA8317EA212FF3920020B6A5 /* XJNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */; };
+		AA8317EB212FF3920020B6A5 /* 文字输入按钮背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */; };
+		AA8317EC212FF3920020B6A5 /* icon_secrecy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */; };
+		AA8317ED212FF3920020B6A5 /* icon_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D6212FF3920020B6A5 /* icon_open@2x.png */; };
+		AA8317EE212FF3920020B6A5 /* btn_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D7212FF3920020B6A5 /* btn_add@2x.png */; };
+		AA8317EF212FF3920020B6A5 /* IOS会话_表情按钮@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */; };
+		AA8317F0212FF3920020B6A5 /* btn_choose_somebody@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */; };
+		AA8317F1212FF3920020B6A5 /* btn_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */; };
+		AA8317F2212FF3920020B6A5 /* btn_picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */; };
+		AA8317F3212FF3920020B6A5 /* icon_friendVisible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */; };
+		AA8317F4212FF3920020B6A5 /* btn_keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */; };
+		AA8317F5212FF3920020B6A5 /* icon_choose_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */; };
+		AA8317F6212FF3920020B6A5 /* icon_part@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DF212FF3920020B6A5 /* icon_part@2x.png */; };
+		AA8317F7212FF3920020B6A5 /* icon_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */; };
+		AA8317F8212FF3920020B6A5 /* icon_invisible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */; };
+		AA8317F9212FF3920020B6A5 /* XJFaceEmojeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */; };
+		AA8317FA212FF3920020B6A5 /* expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E3212FF3920020B6A5 /* expression.plist */; };
+		AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */; };
+		AA8317FC212FF3920020B6A5 /* XJItemSelView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E5212FF3920020B6A5 /* XJItemSelView.m */; };
+		AA8317FD212FF3920020B6A5 /* XJInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E6212FF3920020B6A5 /* XJInputView.m */; };
+		AA831801212FFA260020B6A5 /* UIView+FrameUtilty.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */; };
+		AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831803212FFB540020B6A5 /* UIColor+ZS.m */; };
+		AA831807212FFEEE0020B6A5 /* TestCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */; };
+		AA831809213002BD0020B6A5 /* emoje1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA831808213002BD0020B6A5 /* emoje1.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA8317AD212FF3350020B6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA83178C212FF3290020B6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA831793212FF3290020B6A5;
+			remoteInfo = XJInputView;
+		};
+		AA8317B8212FF3350020B6A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA83178C212FF3290020B6A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA831793212FF3290020B6A5;
+			remoteInfo = XJInputView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13F01CCC009C54FAF92B187C /* Pods-XJInputView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJInputView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XJInputView/Pods-XJInputView.debug.xcconfig"; sourceTree = "<group>"; };
+		519FAD13DADEABDCC4152976 /* Pods-XJInputView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XJInputView.release.xcconfig"; path = "Pods/Target Support Files/Pods-XJInputView/Pods-XJInputView.release.xcconfig"; sourceTree = "<group>"; };
+		7533225A4B384E9340C9F120 /* libPods-XJInputView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XJInputView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA831794212FF3290020B6A5 /* XJInputView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XJInputView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA831797212FF32A0020B6A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AA831798212FF32A0020B6A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AA83179A212FF32A0020B6A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AA83179B212FF32A0020B6A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AA83179E212FF32A0020B6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA8317A0212FF3350020B6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA8317A3212FF3350020B6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA8317A5212FF3350020B6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8317A6212FF3350020B6A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA8317AC212FF3350020B6A5 /* XJInputViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJInputViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8317B0212FF3350020B6A5 /* XJInputViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJInputViewTests.m; sourceTree = "<group>"; };
+		AA8317B2212FF3350020B6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8317B7212FF3350020B6A5 /* XJInputViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XJInputViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8317BB212FF3350020B6A5 /* XJInputViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJInputViewUITests.m; sourceTree = "<group>"; };
+		AA8317BD212FF3350020B6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8317CA212FF3910020B6A5 /* XJMulitFuctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJMulitFuctionView.m; sourceTree = "<group>"; };
+		AA8317CB212FF3920020B6A5 /* XJFaceInputHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJFaceInputHelper.m; sourceTree = "<group>"; };
+		AA8317CC212FF3920020B6A5 /* XJFaceEmojeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJFaceEmojeView.h; sourceTree = "<group>"; };
+		AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewPostViewController.m; sourceTree = "<group>"; };
+		AA8317CE212FF3920020B6A5 /* XJNewPostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNewPostCollectionViewCell.h; sourceTree = "<group>"; };
+		AA8317CF212FF3920020B6A5 /* XJItemSelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJItemSelView.h; sourceTree = "<group>"; };
+		AA8317D0212FF3920020B6A5 /* XJMulitFuctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMulitFuctionView.h; sourceTree = "<group>"; };
+		AA8317D1212FF3920020B6A5 /* XJInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJInputView.h; sourceTree = "<group>"; };
+		AA8317D2212FF3920020B6A5 /* XJFaceInputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJFaceInputHelper.h; sourceTree = "<group>"; };
+		AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文字输入按钮背景@2x.png"; sourceTree = "<group>"; };
+		AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_secrecy@2x.png"; sourceTree = "<group>"; };
+		AA8317D6212FF3920020B6A5 /* icon_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_open@2x.png"; sourceTree = "<group>"; };
+		AA8317D7212FF3920020B6A5 /* btn_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add@2x.png"; sourceTree = "<group>"; };
+		AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IOS会话_表情按钮@2x.png"; sourceTree = "<group>"; };
+		AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_choose_somebody@2x.png"; sourceTree = "<group>"; };
+		AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_delete@2x.png"; sourceTree = "<group>"; };
+		AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_picture@2x.png"; sourceTree = "<group>"; };
+		AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_friendVisible@2x.png"; sourceTree = "<group>"; };
+		AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_keyboard@2x.png"; sourceTree = "<group>"; };
+		AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_choose_default@2x.png"; sourceTree = "<group>"; };
+		AA8317DF212FF3920020B6A5 /* icon_part@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_part@2x.png"; sourceTree = "<group>"; };
+		AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Selected@2x.png"; sourceTree = "<group>"; };
+		AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_invisible@2x.png"; sourceTree = "<group>"; };
+		AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJFaceEmojeView.m; sourceTree = "<group>"; };
+		AA8317E3212FF3920020B6A5 /* expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression.plist; sourceTree = "<group>"; };
+		AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewPostCollectionViewCell.m; sourceTree = "<group>"; };
+		AA8317E5212FF3920020B6A5 /* XJItemSelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJItemSelView.m; sourceTree = "<group>"; };
+		AA8317E6212FF3920020B6A5 /* XJInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJInputView.m; sourceTree = "<group>"; };
+		AA8317E7212FF3920020B6A5 /* XJNewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJNewPostViewController.h; sourceTree = "<group>"; };
+		AA8317FE212FF8510020B6A5 /* XJInputDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJInputDefine.h; sourceTree = "<group>"; };
+		AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameUtilty.m"; sourceTree = "<group>"; };
+		AA831800212FFA260020B6A5 /* UIView+FrameUtilty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameUtilty.h"; sourceTree = "<group>"; };
+		AA831802212FFB540020B6A5 /* UIColor+ZS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZS.h"; sourceTree = "<group>"; };
+		AA831803212FFB540020B6A5 /* UIColor+ZS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZS.m"; sourceTree = "<group>"; };
+		AA831805212FFEEE0020B6A5 /* TestCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCommentViewController.h; sourceTree = "<group>"; };
+		AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCommentViewController.m; sourceTree = "<group>"; };
+		AA831808213002BD0020B6A5 /* emoje1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = emoje1.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA831791212FF3290020B6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C20B7CCB6A4AE730A084848 /* libPods-XJInputView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317A9212FF3350020B6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317B4212FF3350020B6A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA83178B212FF3290020B6A5 = {
+			isa = PBXGroup;
+			children = (
+				AA831796212FF3290020B6A5 /* XJInputView */,
+				AA8317AF212FF3350020B6A5 /* XJInputViewTests */,
+				AA8317BA212FF3350020B6A5 /* XJInputViewUITests */,
+				AA831795212FF3290020B6A5 /* Products */,
+				E129648805DB9D14F581B09D /* Pods */,
+				B79AD0905D373420DD3C883F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA831795212FF3290020B6A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA831794212FF3290020B6A5 /* XJInputView.app */,
+				AA8317AC212FF3350020B6A5 /* XJInputViewTests.xctest */,
+				AA8317B7212FF3350020B6A5 /* XJInputViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA831796212FF3290020B6A5 /* XJInputView */ = {
+			isa = PBXGroup;
+			children = (
+				AA8317C9212FF3520020B6A5 /* XJInputView */,
+				AA831797212FF32A0020B6A5 /* AppDelegate.h */,
+				AA831798212FF32A0020B6A5 /* AppDelegate.m */,
+				AA83179A212FF32A0020B6A5 /* ViewController.h */,
+				AA83179B212FF32A0020B6A5 /* ViewController.m */,
+				AA831805212FFEEE0020B6A5 /* TestCommentViewController.h */,
+				AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */,
+				AA83179D212FF32A0020B6A5 /* Main.storyboard */,
+				AA8317A0212FF3350020B6A5 /* Assets.xcassets */,
+				AA8317A2212FF3350020B6A5 /* LaunchScreen.storyboard */,
+				AA8317A5212FF3350020B6A5 /* Info.plist */,
+				AA8317A6212FF3350020B6A5 /* main.m */,
+			);
+			path = XJInputView;
+			sourceTree = "<group>";
+		};
+		AA8317AF212FF3350020B6A5 /* XJInputViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA8317B0212FF3350020B6A5 /* XJInputViewTests.m */,
+				AA8317B2212FF3350020B6A5 /* Info.plist */,
+			);
+			path = XJInputViewTests;
+			sourceTree = "<group>";
+		};
+		AA8317BA212FF3350020B6A5 /* XJInputViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA8317BB212FF3350020B6A5 /* XJInputViewUITests.m */,
+				AA8317BD212FF3350020B6A5 /* Info.plist */,
+			);
+			path = XJInputViewUITests;
+			sourceTree = "<group>";
+		};
+		AA8317C9212FF3520020B6A5 /* XJInputView */ = {
+			isa = PBXGroup;
+			children = (
+				AA831808213002BD0020B6A5 /* emoje1.bundle */,
+				AA8317E3212FF3920020B6A5 /* expression.plist */,
+				AA8317D3212FF3920020B6A5 /* Resource */,
+				AA8317CC212FF3920020B6A5 /* XJFaceEmojeView.h */,
+				AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */,
+				AA8317D2212FF3920020B6A5 /* XJFaceInputHelper.h */,
+				AA8317CB212FF3920020B6A5 /* XJFaceInputHelper.m */,
+				AA8317D1212FF3920020B6A5 /* XJInputView.h */,
+				AA8317E6212FF3920020B6A5 /* XJInputView.m */,
+				AA8317CF212FF3920020B6A5 /* XJItemSelView.h */,
+				AA8317E5212FF3920020B6A5 /* XJItemSelView.m */,
+				AA8317D0212FF3920020B6A5 /* XJMulitFuctionView.h */,
+				AA8317CA212FF3910020B6A5 /* XJMulitFuctionView.m */,
+				AA8317CE212FF3920020B6A5 /* XJNewPostCollectionViewCell.h */,
+				AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */,
+				AA831800212FFA260020B6A5 /* UIView+FrameUtilty.h */,
+				AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */,
+				AA831802212FFB540020B6A5 /* UIColor+ZS.h */,
+				AA831803212FFB540020B6A5 /* UIColor+ZS.m */,
+				AA8317E7212FF3920020B6A5 /* XJNewPostViewController.h */,
+				AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */,
+				AA8317FE212FF8510020B6A5 /* XJInputDefine.h */,
+			);
+			path = XJInputView;
+			sourceTree = "<group>";
+		};
+		AA8317D3212FF3920020B6A5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */,
+				AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */,
+				AA8317D6212FF3920020B6A5 /* icon_open@2x.png */,
+				AA8317D7212FF3920020B6A5 /* btn_add@2x.png */,
+				AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */,
+				AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */,
+				AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */,
+				AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */,
+				AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */,
+				AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */,
+				AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */,
+				AA8317DF212FF3920020B6A5 /* icon_part@2x.png */,
+				AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */,
+				AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B79AD0905D373420DD3C883F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7533225A4B384E9340C9F120 /* libPods-XJInputView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E129648805DB9D14F581B09D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13F01CCC009C54FAF92B187C /* Pods-XJInputView.debug.xcconfig */,
+				519FAD13DADEABDCC4152976 /* Pods-XJInputView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA831793212FF3290020B6A5 /* XJInputView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA8317C0212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputView" */;
+			buildPhases = (
+				F7C5C0E1EEBAE2633A2735F0 /* [CP] Check Pods Manifest.lock */,
+				AA831790212FF3290020B6A5 /* Sources */,
+				AA831791212FF3290020B6A5 /* Frameworks */,
+				AA831792212FF3290020B6A5 /* Resources */,
+				0D4D67CDB6E8FDC58DC6B30D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XJInputView;
+			productName = XJInputView;
+			productReference = AA831794212FF3290020B6A5 /* XJInputView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA8317AB212FF3350020B6A5 /* XJInputViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA8317C3212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputViewTests" */;
+			buildPhases = (
+				AA8317A8212FF3350020B6A5 /* Sources */,
+				AA8317A9212FF3350020B6A5 /* Frameworks */,
+				AA8317AA212FF3350020B6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA8317AE212FF3350020B6A5 /* PBXTargetDependency */,
+			);
+			name = XJInputViewTests;
+			productName = XJInputViewTests;
+			productReference = AA8317AC212FF3350020B6A5 /* XJInputViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA8317B6212FF3350020B6A5 /* XJInputViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA8317C6212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputViewUITests" */;
+			buildPhases = (
+				AA8317B3212FF3350020B6A5 /* Sources */,
+				AA8317B4212FF3350020B6A5 /* Frameworks */,
+				AA8317B5212FF3350020B6A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA8317B9212FF3350020B6A5 /* PBXTargetDependency */,
+			);
+			name = XJInputViewUITests;
+			productName = XJInputViewUITests;
+			productReference = AA8317B7212FF3350020B6A5 /* XJInputViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA83178C212FF3290020B6A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = XJ;
+				TargetAttributes = {
+					AA831793212FF3290020B6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					AA8317AB212FF3350020B6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AA831793212FF3290020B6A5;
+					};
+					AA8317B6212FF3350020B6A5 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AA831793212FF3290020B6A5;
+					};
+				};
+			};
+			buildConfigurationList = AA83178F212FF3290020B6A5 /* Build configuration list for PBXProject "XJInputView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA83178B212FF3290020B6A5;
+			productRefGroup = AA831795212FF3290020B6A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA831793212FF3290020B6A5 /* XJInputView */,
+				AA8317AB212FF3350020B6A5 /* XJInputViewTests */,
+				AA8317B6212FF3350020B6A5 /* XJInputViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA831792212FF3290020B6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8317EB212FF3920020B6A5 /* 文字输入按钮背景@2x.png in Resources */,
+				AA8317F2212FF3920020B6A5 /* btn_picture@2x.png in Resources */,
+				AA8317FA212FF3920020B6A5 /* expression.plist in Resources */,
+				AA8317F7212FF3920020B6A5 /* icon_Selected@2x.png in Resources */,
+				AA8317F8212FF3920020B6A5 /* icon_invisible@2x.png in Resources */,
+				AA8317EE212FF3920020B6A5 /* btn_add@2x.png in Resources */,
+				AA8317F4212FF3920020B6A5 /* btn_keyboard@2x.png in Resources */,
+				AA8317F5212FF3920020B6A5 /* icon_choose_default@2x.png in Resources */,
+				AA8317EC212FF3920020B6A5 /* icon_secrecy@2x.png in Resources */,
+				AA8317F3212FF3920020B6A5 /* icon_friendVisible@2x.png in Resources */,
+				AA8317F0212FF3920020B6A5 /* btn_choose_somebody@2x.png in Resources */,
+				AA8317EF212FF3920020B6A5 /* IOS会话_表情按钮@2x.png in Resources */,
+				AA8317F6212FF3920020B6A5 /* icon_part@2x.png in Resources */,
+				AA8317A4212FF3350020B6A5 /* LaunchScreen.storyboard in Resources */,
+				AA831809213002BD0020B6A5 /* emoje1.bundle in Resources */,
+				AA8317F1212FF3920020B6A5 /* btn_delete@2x.png in Resources */,
+				AA8317A1212FF3350020B6A5 /* Assets.xcassets in Resources */,
+				AA83179F212FF32A0020B6A5 /* Main.storyboard in Resources */,
+				AA8317ED212FF3920020B6A5 /* icon_open@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317AA212FF3350020B6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317B5212FF3350020B6A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D4D67CDB6E8FDC58DC6B30D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XJInputView/Pods-XJInputView-resources.sh",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XJInputView/Pods-XJInputView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C5C0E1EEBAE2633A2735F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XJInputView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA831790212FF3290020B6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8317F9212FF3920020B6A5 /* XJFaceEmojeView.m in Sources */,
+				AA8317FD212FF3920020B6A5 /* XJInputView.m in Sources */,
+				AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */,
+				AA8317FC212FF3920020B6A5 /* XJItemSelView.m in Sources */,
+				AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */,
+				AA83179C212FF32A0020B6A5 /* ViewController.m in Sources */,
+				AA8317A7212FF3350020B6A5 /* main.m in Sources */,
+				AA831799212FF32A0020B6A5 /* AppDelegate.m in Sources */,
+				AA831807212FFEEE0020B6A5 /* TestCommentViewController.m in Sources */,
+				AA8317EA212FF3920020B6A5 /* XJNewPostViewController.m in Sources */,
+				AA8317E8212FF3920020B6A5 /* XJMulitFuctionView.m in Sources */,
+				AA8317E9212FF3920020B6A5 /* XJFaceInputHelper.m in Sources */,
+				AA831801212FFA260020B6A5 /* UIView+FrameUtilty.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317A8212FF3350020B6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8317B1212FF3350020B6A5 /* XJInputViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA8317B3212FF3350020B6A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8317BC212FF3350020B6A5 /* XJInputViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA8317AE212FF3350020B6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA831793212FF3290020B6A5 /* XJInputView */;
+			targetProxy = AA8317AD212FF3350020B6A5 /* PBXContainerItemProxy */;
+		};
+		AA8317B9212FF3350020B6A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA831793212FF3290020B6A5 /* XJInputView */;
+			targetProxy = AA8317B8212FF3350020B6A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA83179D212FF32A0020B6A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA83179E212FF32A0020B6A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA8317A2212FF3350020B6A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA8317A3212FF3350020B6A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA8317BE212FF3350020B6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA8317BF212FF3350020B6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA8317C1212FF3350020B6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13F01CCC009C54FAF92B187C /* Pods-XJInputView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA8317C2212FF3350020B6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 519FAD13DADEABDCC4152976 /* Pods-XJInputView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA8317C4212FF3350020B6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XJInputView.app/XJInputView";
+			};
+			name = Debug;
+		};
+		AA8317C5212FF3350020B6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XJInputView.app/XJInputView";
+			};
+			name = Release;
+		};
+		AA8317C7212FF3350020B6A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XJInputView;
+			};
+			name = Debug;
+		};
+		AA8317C8212FF3350020B6A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = XJInputViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jxshunqiziran.XJInputViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = XJInputView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA83178F212FF3290020B6A5 /* Build configuration list for PBXProject "XJInputView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA8317BE212FF3350020B6A5 /* Debug */,
+				AA8317BF212FF3350020B6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA8317C0212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA8317C1212FF3350020B6A5 /* Debug */,
+				AA8317C2212FF3350020B6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA8317C3212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA8317C4212FF3350020B6A5 /* Debug */,
+				AA8317C5212FF3350020B6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA8317C6212FF3350020B6A5 /* Build configuration list for PBXNativeTarget "XJInputViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA8317C7212FF3350020B6A5 /* Debug */,
+				AA8317C8212FF3350020B6A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA83178C212FF3290020B6A5 /* Project object */;
+}

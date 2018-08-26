@@ -21,7 +21,7 @@
 + (instancetype)manager NS_SWIFT_NAME(default());
 + (void)deallocManager;
 
-@property (assign, nonatomic) id<TZImagePickerControllerDelegate> pickerDelegate;
+@property (weak, nonatomic) id<TZImagePickerControllerDelegate> pickerDelegate;
 
 @property (nonatomic, assign) BOOL shouldFixOrientation;
 
@@ -47,13 +47,14 @@
 /// Return YES if Authorized 返回YES如果得到了授权
 - (BOOL)authorizationStatusAuthorized;
 + (NSInteger)authorizationStatus;
-- (void)requestAuthorizationWithCompletion:(void (^)())completion;
+- (void)requestAuthorizationWithCompletion:(void (^)(void))completion;
 
 /// Get Album 获得相册/相册数组
-- (void)getCameraRollAlbum:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage completion:(void (^)(TZAlbumModel *model))completion;
-- (void)getAllAlbums:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage completion:(void (^)(NSArray<TZAlbumModel *> *models))completion;
+- (void)getCameraRollAlbum:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage needFetchAssets:(BOOL)needFetchAssets completion:(void (^)(TZAlbumModel *model))completion;
+- (void)getAllAlbums:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage needFetchAssets:(BOOL)needFetchAssets completion:(void (^)(NSArray<TZAlbumModel *> *models))completion;
 
 /// Get Assets 获得Asset数组
+- (void)getAssetsFromFetchResult:(id)result completion:(void (^)(NSArray<TZAssetModel *> *models))completion;
 - (void)getAssetsFromFetchResult:(id)result allowPickingVideo:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage completion:(void (^)(NSArray<TZAssetModel *> *models))completion;
 - (void)getAssetFromFetchResult:(id)result atIndex:(NSInteger)index allowPickingVideo:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage completion:(void (^)(TZAssetModel *model))completion;
 
@@ -76,12 +77,19 @@
 - (void)savePhotoWithImage:(UIImage *)image completion:(void (^)(NSError *error))completion;
 - (void)savePhotoWithImage:(UIImage *)image location:(CLLocation *)location completion:(void (^)(NSError *error))completion;
 
+/// Save video 保存视频
+- (void)saveVideoWithUrl:(NSURL *)url completion:(void (^)(NSError *error))completion;
+- (void)saveVideoWithUrl:(NSURL *)url location:(CLLocation *)location completion:(void (^)(NSError *error))completion;
+
 /// Get video 获得视频
 - (void)getVideoWithAsset:(id)asset completion:(void (^)(AVPlayerItem * playerItem, NSDictionary * info))completion;
 - (void)getVideoWithAsset:(id)asset progressHandler:(void (^)(double progress, NSError *error, BOOL *stop, NSDictionary *info))progressHandler completion:(void (^)(AVPlayerItem *, NSDictionary *))completion;
 
-/// Export video 导出视频
-- (void)getVideoOutputPathWithAsset:(id)asset completion:(void (^)(NSString *outputPath))completion;
+/// Export video 导出视频 presetName: 预设名字，默认值是AVAssetExportPreset640x480
+- (void)getVideoOutputPathWithAsset:(id)asset success:(void (^)(NSString *outputPath))success failure:(void (^)(NSString *errorMessage, NSError *error))failure;
+- (void)getVideoOutputPathWithAsset:(id)asset presetName:(NSString *)presetName success:(void (^)(NSString *outputPath))success failure:(void (^)(NSString *errorMessage, NSError *error))failure;
+/// Deprecated, Use -getVideoOutputPathWithAsset:failure:success:
+- (void)getVideoOutputPathWithAsset:(id)asset completion:(void (^)(NSString *outputPath))completion __attribute__((deprecated("Use -getVideoOutputPathWithAsset:failure:success:")));
 
 /// Get photo bytes 获得一组照片的大小
 - (void)getPhotosBytesWithArray:(NSArray *)photos completion:(void (^)(NSString *totalBytes))completion;
@@ -101,6 +109,9 @@
 
 /// 获取asset的资源类型
 - (TZAssetModelMediaType)getAssetType:(id)asset;
+
+/// 缩放图片至新尺寸
+- (UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)size;
 
 @end
 

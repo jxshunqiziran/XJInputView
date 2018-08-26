@@ -1,12 +1,12 @@
-platform :ios, ’8.0’
-#use_frameworks!
-target ‘XJNewPostDemo’ do
+platform :ios, '8.0'
+
+inhibit_all_warnings!
+
+target 'XJInputView' do
+
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'TZImagePickerController'
 
 
-pod 'SDWebImage'
-pod 'YYKit'
-pod 'Masonry'
-pod 'TZImagePickerController'
-
- 
 end

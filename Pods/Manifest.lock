@@ -1,25 +1,26 @@
 PODS:
   - Masonry (1.1.0)
-  - SDWebImage (4.2.1):
-    - SDWebImage/Core (= 4.2.1)
-  - SDWebImage/Core (4.2.1)
-  - TZImagePickerController (1.9.3)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - TZImagePickerController (2.1.0.3)
 
 DEPENDENCIES:
   - Masonry
   - SDWebImage
   - TZImagePickerController
-  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
+    - SDWebImage
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
-  TZImagePickerController: 079ab986018c22793462e531045a75e366b18252
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  TZImagePickerController: 0fbbb79c74cfad5afda2df606605ab05bede78f2
 
-PODFILE CHECKSUM: c3e3548031db5ef95b33df33f27d82daebdc86ab
+PODFILE CHECKSUM: c35c9f63b985a316b33a101992113125e1a10bbe
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.0
