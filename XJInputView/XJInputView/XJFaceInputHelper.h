@@ -17,6 +17,10 @@
 
 @property (nonatomic, strong) NSDictionary *emojeDic;
 
+@property (nonatomic, strong) NSMutableArray *emojeKindsArray;
+
 - (NSMutableArray*)getAllEmojePage;
+
+- (UIImage*)getBundleImage:(NSString*)imageNamed;
 
 @end

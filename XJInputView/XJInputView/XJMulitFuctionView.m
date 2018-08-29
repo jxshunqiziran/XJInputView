@@ -33,10 +33,19 @@
         
         [self addSubview:self.topView];
         [self addSubview:self.containerView];
+        [self setupLayerLineView];
         
     }
     return self;
     
+}
+
+- (void)setupLayerLineView
+{
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(0, self.xj_height-0.6,XJScreenWidth, 0.6);
+    layer.backgroundColor = XJColor(190, 190, 190).CGColor;
+    [self.layer addSublayer:layer];
 }
 
 - (UIView*)containerView
@@ -55,7 +64,7 @@
 {
     if (!_topView) {
         _topView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, XJScreenWidth, topViewHeight)];
-//        _topView.backgroundColor = [UIColor grayColor];
+        _topView.backgroundColor = [UIColor whiteColor];
         [_topView addSubview:self.secretBtn];
     }
     return _topView;

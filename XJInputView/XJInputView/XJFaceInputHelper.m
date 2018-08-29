@@ -42,6 +42,14 @@ static XJFaceInputHelper *_faceHelper = nil;
     return _emojeDic;
 }
 
+- (NSMutableArray*)emojeKindsArray
+{
+    if (!_emojeKindsArray) {
+        _emojeKindsArray = [NSMutableArray arrayWithObjects:@"EmotionsEmojiHL",@"EmotionCustomHL", nil];
+    }
+    return _emojeKindsArray;
+}
+
 
 /**
  整理数据源,取到所有表情数组;
@@ -58,7 +66,7 @@ static XJFaceInputHelper *_faceHelper = nil;
     NSMutableArray *tempArray = nil;
     for (int i = 0; i < array.count; i++) {
         if (i % 23 == 0) {
-            [tempArray addObject:@"compose_emotion_delete"];
+            [tempArray addObject:@"DeleteEmoticonBtn"];
             tempArray = [NSMutableArray arrayWithCapacity:0];
             [allPageArray addObject:tempArray];
         }
@@ -67,4 +75,18 @@ static XJFaceInputHelper *_faceHelper = nil;
     return allPageArray;
     
 }
+
+
+/**
+ 获取bundle内的图片;
+ */
+- (UIImage*)getBundleImage:(NSString*)imageNamed
+{
+    NSString *strResourcesBundle = [[NSBundle mainBundle] pathForResource:@"xjemoje1" ofType:@"bundle"];
+    NSString *imgPath= [strResourcesBundle stringByAppendingPathComponent:imageNamed];
+    UIImage *imgC = [UIImage imageWithContentsOfFile:imgPath];
+    return imgC;
+}
+
+
 @end

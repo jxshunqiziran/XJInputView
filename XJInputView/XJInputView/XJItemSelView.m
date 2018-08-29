@@ -25,7 +25,7 @@
 {
     
     XJItemSelView *itemSelfView = [[XJItemSelView alloc]initWithFrame:CGRectMake(0, XJScreenHeight, XJScreenWidth, 300)];
-    itemSelfView.backgroundColor = [UIColor whiteColor];
+    itemSelfView.backgroundColor = XJColor(236, 237, 241);
     [view addSubview:itemSelfView];
     itemSelfView.itemSelfType = itemSelfType;
     

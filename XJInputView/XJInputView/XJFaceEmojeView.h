@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) NSString *emjeNamed;
 
+@property (nonatomic, strong) NSString *emjeString;
+
 @end
 
 

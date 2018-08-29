@@ -26,6 +26,7 @@
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [self addSubview:self.contentTextView];
         [self addSubview:self.faceSelBtn];
+        [self setupLayerLineView];
         
         [self makeConstraint];
         
@@ -81,6 +82,7 @@
     return _contentTextView;
 }
 
+
 - (UIButton *)faceSelBtn
 {
     if (!_faceSelBtn) {
@@ -93,6 +95,13 @@
     return _faceSelBtn;
 }
 
+- (void)setupLayerLineView
+{
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(0, self.xj_height-0.5,XJScreenWidth, 0.5);
+    layer.backgroundColor = XJColor(200, 200, 200).CGColor;
+    [self.layer addSublayer:layer];
+}
 
 - (void)switchEnter
 {

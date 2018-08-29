@@ -7,14 +7,19 @@
 //
 
 /*待优化:
- 1,长按表情展示图片加文字;
+ 1,长按表情展示图片加文字;  显示表情加动画;
  2,异步加载第一页以后数据;
- 3,动图,
+ 3,动图;
+ 4,最后发送的文字输出;
+ 5,参数决定底部选项是否显示;
+ 6,自己判断是否减去64;
+ 7,适配iphoneX;
  */
 
 #import "XJFaceEmojeView.h"
 #import "XJFaceInputHelper.h"
 #import "XJInputDefine.h"
+#import "XJEmojePreView.h"
 
 @implementation XJFaceButton
 
@@ -27,7 +32,7 @@
 
 @property(nonatomic, strong) UIPageControl *pageControl;
 
-@property(nonatomic, strong) UIView *bottomBar;
+@property(nonatomic, strong) UIScrollView *bottomBar;
 
 @property(nonatomic, strong) UIButton *sendBtn;
 
@@ -36,6 +41,8 @@
 @property(nonatomic, strong) NSMutableArray *allPageArray;
 
 @property(nonatomic, assign) CGFloat imageHeight;
+
+@property(nonatomic, strong) XJEmojePreView *emojePreView;
 
 @end
 
@@ -60,6 +67,7 @@
     [self addSubview:self.pageControl];
     [self addSubview:self.bottomBar];
     [self.bottomBar addSubview:self.sendBtn];
+    [self configToobarView];
     [self calculteImageHeight];
 }
 
@@ -80,11 +88,12 @@
 
     _pageScrollVeiw.contentSize = CGSizeMake(XJScreenWidth*self.allPageArray.count, FaceEmojeViewHeight-50);
     _pageControl.numberOfPages = self.allPageArray.count;
+  
     
     for (int i = 0; i < self.allPageArray.count; i++) {
         
         UIView *faceBglView = [[UIView alloc]initWithFrame:CGRectMake(XJScreenWidth*i, 0, XJScreenWidth, self.frame.size.height-40)];
-        faceBglView.backgroundColor = [UIColor whiteColor];
+        faceBglView.backgroundColor =  XJColor(245, 245, 245);;
         [_pageScrollVeiw addSubview:faceBglView];
         
         NSArray *pageImageNameArray = self.allPageArray[i];
@@ -93,18 +102,21 @@
             NSString *imageNamed = pageImageNameArray[j];
             XJFaceButton *emojeBtn = [XJFaceButton buttonWithType:UIButtonTypeCustom];
             emojeBtn.indexPath = [NSIndexPath indexPathForRow:j inSection:i];
-//            UIImage *emojeImage = GETIMG(self.emojeDic[imageNamed]);
-            UIImage *emojeImage = [self getBundleImage:self.emojeDic[imageNamed]];
+            UIImage *emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:self.emojeDic[imageNamed]];
             if (j == pageImageNameArray.count -1) {
-                emojeImage = GETIMG(imageNamed);
+                emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:imageNamed];
                 emojeBtn.isDleted = YES;
             }
+            emojeBtn.emjeString = imageNamed;
             emojeBtn.emjeNamed = self.emojeDic[imageNamed];
             [emojeBtn setBackgroundImage:emojeImage forState:UIControlStateNormal];
             CGFloat spaceW = (XJScreenWidth-EmojeWH*8-2*20)/7;
             emojeBtn.frame = CGRectMake(20+j%8*(EmojeWH+spaceW),20+j/8*(EmojeWH+15), EmojeWH, EmojeWH);
             [faceBglView addSubview:emojeBtn];
             [emojeBtn addTarget:self action:@selector(clickEmoje:) forControlEvents:UIControlEventTouchUpInside];
+            
+            UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+            [emojeBtn addGestureRecognizer:longPress];
         }
     }
     
@@ -135,6 +147,19 @@
     
 }
 
+- (void)configToobarView
+{
+    NSMutableArray *emojeKindArray = [XJFaceInputHelper shareFaceHelper].emojeKindsArray;
+    for (int i = 0; i < emojeKindArray.count; i++) {
+        
+        UIImage *imageNamed = [UIImage imageNamed:emojeKindArray[i]];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(40*i, 0, 40, 40);
+        [btn setImage:imageNamed forState:UIControlStateNormal];
+        [_bottomBar addSubview:btn];
+    }
+}
+
 - (void)clickEmoje:(XJFaceButton*)sender
 {
     
@@ -146,8 +171,7 @@
     }
     
     //富文本展示表情:
-    UIImage *image = [self getBundleImage:sender.emjeNamed];
-//    UIImage *image = [UIImage imageNamed:sender.emjeNamed];
+    UIImage *image = [[XJFaceInputHelper shareFaceHelper] getBundleImage:sender.emjeNamed];
     NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
     attachment.image = image;
     NSMutableAttributedString *attachmentString = (NSMutableAttributedString *)[NSAttributedString attributedStringWithAttachment:attachment];
@@ -164,6 +188,27 @@
     
     [self adjustContentTextViewHeight];
     
+}
+
+
+/**
+ 长按展示表情和表达内容:
+ */
+- (void) longPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    XJFaceButton *button = (XJFaceButton *)gestureRecognizer.view;
+    if(gestureRecognizer.state == UIGestureRecognizerStateBegan)
+    {
+        self.emojePreView.hidden = NO;
+        CGPoint point = [gestureRecognizer locationInView:button];
+        self.emojePreView.est_origin = CGPointMake(point.x-25, point.y-100);
+        [self.emojePreView setEmojeString:button.emjeString emojeImageNamed:button.emjeNamed];
+        [button addSubview:self.emojePreView];
+    }else if (gestureRecognizer.state == UIGestureRecognizerStateEnded){
+        
+        self.emojePreView.hidden = YES;
+        [self clickEmoje:button];
+    }
 }
 
 - (void) adjustContentTextViewHeight
@@ -183,13 +228,6 @@
     self.emojeDic = [XJFaceInputHelper shareFaceHelper].emojeDic;
 }
 
-- (UIImage*)getBundleImage:(NSString*)imageNamed
-{
-   NSString *strResourcesBundle = [[NSBundle mainBundle] pathForResource:@"emoje1" ofType:@"bundle"];
-   NSString *imgPath= [strResourcesBundle stringByAppendingPathComponent:imageNamed];
-   UIImage *imgC = [UIImage imageWithContentsOfFile:imgPath];
-   return imgC;
-}
 
 /**
  发送:
@@ -232,10 +270,19 @@
 - (UIView *)bottomBar {
     
     if (!_bottomBar) {
-        _bottomBar = [[UIView alloc]initWithFrame:CGRectMake(0, self.xj_height-BottomBarHeight, XJScreenWidth, BottomBarHeight)];
-        _bottomBar.backgroundColor = XJColor(236, 237, 241);
+        _bottomBar = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.xj_height-BottomBarHeight, XJScreenWidth, BottomBarHeight)];
+        _bottomBar.backgroundColor = [UIColor whiteColor];
+//        _bottomBar.backgroundColor = XJColor(236, 237, 241);
     }
     return _bottomBar;
+}
+
+- (XJEmojePreView *)emojePreView {
+    
+    if (!_emojePreView) {
+        _emojePreView = [[XJEmojePreView alloc]initWithFrame:CGRectMake(0, 0, 50, 100)];
+    }
+    return _emojePreView;
 }
 
 //发送按钮

@@ -41,7 +41,11 @@
 		AA831801212FFA260020B6A5 /* UIView+FrameUtilty.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */; };
 		AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831803212FFB540020B6A5 /* UIColor+ZS.m */; };
 		AA831807212FFEEE0020B6A5 /* TestCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */; };
-		AA831809213002BD0020B6A5 /* emoje1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA831808213002BD0020B6A5 /* emoje1.bundle */; };
+		AA83180B2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */; };
+		AA83180F2133DC040020B6A5 /* EmotionCustomHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */; };
+		AA8318112133E4260020B6A5 /* EmoticonTips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */; };
+		AA8318142133E4810020B6A5 /* XJEmojePreView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8318132133E4810020B6A5 /* XJEmojePreView.m */; };
+		AA8318162134522C0020B6A5 /* xjemoje1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA8318152134522C0020B6A5 /* xjemoje1.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +121,12 @@
 		AA831803212FFB540020B6A5 /* UIColor+ZS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZS.m"; sourceTree = "<group>"; };
 		AA831805212FFEEE0020B6A5 /* TestCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCommentViewController.h; sourceTree = "<group>"; };
 		AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCommentViewController.m; sourceTree = "<group>"; };
-		AA831808213002BD0020B6A5 /* emoje1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = emoje1.bundle; sourceTree = "<group>"; };
+		AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionsEmojiHL@2x.png"; sourceTree = "<group>"; };
+		AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionCustomHL@2x.png"; sourceTree = "<group>"; };
+		AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmoticonTips@2x.png"; sourceTree = "<group>"; };
+		AA8318122133E4810020B6A5 /* XJEmojePreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEmojePreView.h; sourceTree = "<group>"; };
+		AA8318132133E4810020B6A5 /* XJEmojePreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEmojePreView.m; sourceTree = "<group>"; };
+		AA8318152134522C0020B6A5 /* xjemoje1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xjemoje1.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,13 +217,17 @@
 		AA8317C9212FF3520020B6A5 /* XJInputView */ = {
 			isa = PBXGroup;
 			children = (
-				AA831808213002BD0020B6A5 /* emoje1.bundle */,
+				AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */,
+				AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */,
+				AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */,
 				AA8317E3212FF3920020B6A5 /* expression.plist */,
 				AA8317D3212FF3920020B6A5 /* Resource */,
 				AA8317CC212FF3920020B6A5 /* XJFaceEmojeView.h */,
 				AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */,
 				AA8317D2212FF3920020B6A5 /* XJFaceInputHelper.h */,
 				AA8317CB212FF3920020B6A5 /* XJFaceInputHelper.m */,
+				AA8318122133E4810020B6A5 /* XJEmojePreView.h */,
+				AA8318132133E4810020B6A5 /* XJEmojePreView.m */,
 				AA8317D1212FF3920020B6A5 /* XJInputView.h */,
 				AA8317E6212FF3920020B6A5 /* XJInputView.m */,
 				AA8317CF212FF3920020B6A5 /* XJItemSelView.h */,
@@ -237,6 +250,7 @@
 		AA8317D3212FF3920020B6A5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				AA8318152134522C0020B6A5 /* xjemoje1.bundle */,
 				AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */,
 				AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */,
 				AA8317D6212FF3920020B6A5 /* icon_open@2x.png */,
@@ -381,17 +395,20 @@
 				AA8317F2212FF3920020B6A5 /* btn_picture@2x.png in Resources */,
 				AA8317FA212FF3920020B6A5 /* expression.plist in Resources */,
 				AA8317F7212FF3920020B6A5 /* icon_Selected@2x.png in Resources */,
+				AA8318112133E4260020B6A5 /* EmoticonTips@2x.png in Resources */,
 				AA8317F8212FF3920020B6A5 /* icon_invisible@2x.png in Resources */,
 				AA8317EE212FF3920020B6A5 /* btn_add@2x.png in Resources */,
 				AA8317F4212FF3920020B6A5 /* btn_keyboard@2x.png in Resources */,
 				AA8317F5212FF3920020B6A5 /* icon_choose_default@2x.png in Resources */,
+				AA83180B2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png in Resources */,
 				AA8317EC212FF3920020B6A5 /* icon_secrecy@2x.png in Resources */,
 				AA8317F3212FF3920020B6A5 /* icon_friendVisible@2x.png in Resources */,
 				AA8317F0212FF3920020B6A5 /* btn_choose_somebody@2x.png in Resources */,
 				AA8317EF212FF3920020B6A5 /* IOS会话_表情按钮@2x.png in Resources */,
 				AA8317F6212FF3920020B6A5 /* icon_part@2x.png in Resources */,
 				AA8317A4212FF3350020B6A5 /* LaunchScreen.storyboard in Resources */,
-				AA831809213002BD0020B6A5 /* emoje1.bundle in Resources */,
+				AA8318162134522C0020B6A5 /* xjemoje1.bundle in Resources */,
+				AA83180F2133DC040020B6A5 /* EmotionCustomHL@2x.png in Resources */,
 				AA8317F1212FF3920020B6A5 /* btn_delete@2x.png in Resources */,
 				AA8317A1212FF3350020B6A5 /* Assets.xcassets in Resources */,
 				AA83179F212FF32A0020B6A5 /* Main.storyboard in Resources */,
@@ -464,6 +481,7 @@
 				AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */,
 				AA8317FC212FF3920020B6A5 /* XJItemSelView.m in Sources */,
 				AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */,
+				AA8318142133E4810020B6A5 /* XJEmojePreView.m in Sources */,
 				AA83179C212FF32A0020B6A5 /* ViewController.m in Sources */,
 				AA8317A7212FF3350020B6A5 /* main.m in Sources */,
 				AA831799212FF32A0020B6A5 /* AppDelegate.m in Sources */,

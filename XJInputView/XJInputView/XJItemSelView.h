@@ -14,6 +14,7 @@
 typedef NS_ENUM(NSInteger,XJItemSelType){
     XJItemSelTypeInput,          //输入框类型;
     XJItemSelTypeMulitfuntion,   //功能选择类型;
+    XJItemSelTypeChat,           //聊天类型;
     XJItemSelTypeMulitCustom,    //自定义类型;
 };
 
