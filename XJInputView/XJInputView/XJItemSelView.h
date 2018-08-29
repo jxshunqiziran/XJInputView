@@ -28,6 +28,6 @@ typedef NS_ENUM(NSInteger,XJItemSelType){
 
 @property (nonatomic, assign) XJItemSelType itemSelfType;
 
-+ (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType;
++ (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType contentTextView:(UITextView*)contentTextView;
 
 @end

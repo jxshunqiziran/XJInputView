@@ -45,17 +45,14 @@ static NSString *resueNewPostResueID = @"cell";
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-   
     [self.view addSubview:self.bgScrollView];
     
     [self.bgScrollView addSubview:self.contentTextView];
     
     [self.bgScrollView addSubview:self.picCollectionView];
     
-    _inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeMulitfuntion];
-    _inputView.faceEmojeView.textView = _contentTextView;
+    _inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeMulitfuntion contentTextView:_contentTextView];
     _inputView.faceEmojeView.delegate = self;
-//    _inputView.inputView.delegate = self;
     _inputView.mulitFuctionView.delegate = self;
     
     [self makeConstraint];
@@ -250,7 +247,7 @@ static NSString *resueNewPostResueID = @"cell";
     [self presentViewController:pickerVC animated:YES completion:nil];
     
 }
-
+//这两处代理考虑写在里面;
 #pragma mark  ----- XJFaceEmojeVieDelegate -----
 
 - (void)faceViewClickHeightChanged
@@ -259,6 +256,11 @@ static NSString *resueNewPostResueID = @"cell";
 }
 
 #pragma mark  ------  UITextViewDelegate --------
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    self.inputView.mulitFuctionView.faceSelBtn.selected = NO;
+}
 
 - (void)textViewDidChange:(UITextView *)textView
 {

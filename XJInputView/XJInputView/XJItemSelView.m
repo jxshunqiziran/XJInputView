@@ -21,7 +21,7 @@
 
 @implementation XJItemSelView
 
-+ (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType;
++ (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType contentTextView:(UITextView*)contentTextView;
 {
     
     XJItemSelView *itemSelfView = [[XJItemSelView alloc]initWithFrame:CGRectMake(0, XJScreenHeight, XJScreenWidth, 300)];
@@ -34,7 +34,8 @@
         case XJItemSelTypeMulitfuntion:
         {
             itemSelfView.xj_top = XJScreenHeight - showSumHeight - 64;
-            itemSelfView.mulitFuctionView.parentView = view;
+            itemSelfView.faceEmojeView.textView = contentTextView;
+            itemSelfView.mulitFuctionView.contentTextView = contentTextView;
             [itemSelfView addSubview:itemSelfView.mulitFuctionView];
         }
             break;
@@ -43,7 +44,6 @@
         {
           
             itemSelfView.xj_top = XJScreenHeight - InputHight - 64;
-            itemSelfView.inputView.parentView = view;
             itemSelfView.faceEmojeView.textView = itemSelfView.inputView.contentTextView;
             itemSelfView.faceEmojeView.delegate = itemSelfView.inputView;
             [itemSelfView addSubview:itemSelfView.inputView];

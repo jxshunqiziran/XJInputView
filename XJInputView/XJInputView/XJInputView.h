@@ -26,8 +26,6 @@
 
 @property (nonatomic, copy) void (^faceViewClickBlock)(void);
 
-@property (nonatomic, strong) UIView *parentView;
-
 @property (nonatomic, strong) UITextView *contentTextView;
 
 /*****设置最大行数********/

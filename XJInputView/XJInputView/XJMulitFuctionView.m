@@ -11,8 +11,6 @@
 
 @interface XJMulitFuctionView ()
 
-@property (nonatomic, strong) UIButton *faceSelBtn;
-
 @property (nonatomic, strong) UIButton *picSelBtn;
 
 @property (nonatomic, strong) UIButton *atSelBtn;
@@ -129,7 +127,7 @@
 
 - (void) goAtPerson
 {
-    [self.parentView endEditing:YES];
+    [self.contentTextView endEditing:YES];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(xjFaceEmojeSelType:emojeString:)]) {
         
@@ -142,7 +140,7 @@
 - (void) goSelPic
 {
     
-    [self.parentView endEditing:YES];
+    [self.contentTextView endEditing:YES];
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(xjFaceEmojeSelType:emojeString:)]) {
         
@@ -157,10 +155,15 @@
     
     _faceSelBtn.selected = !_faceSelBtn.selected;
     
-    [self.parentView endEditing:YES];
-    
-    self.faceViewClickBlock();
-    
-    
+    if (_faceSelBtn.selected) {
+        
+        [self.contentTextView endEditing:YES];
+        self.faceViewClickBlock();
+       
+    }else{
+        
+        [self.contentTextView becomeFirstResponder];
+
+    }
 }
 @end

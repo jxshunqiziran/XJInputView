@@ -36,9 +36,11 @@ typedef NS_ENUM(NSInteger,publishSelType)
 
 @property (nonatomic,assign) id<XJItemSelDelegate>delegate;
 
-@property (nonatomic, strong) UIView *parentView;
+@property (nonatomic, strong) UITextView *contentTextView;
 
 @property (nonatomic, strong) UIButton *secretBtn;
+
+@property (nonatomic, strong) UIButton *faceSelBtn;
 
 @property (nonatomic, copy) void (^faceViewClickBlock)(void);
 

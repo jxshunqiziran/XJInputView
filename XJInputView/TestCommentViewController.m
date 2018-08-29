@@ -19,7 +19,7 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    XJItemSelView*inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeInput];
+    XJItemSelView*inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeInput contentTextView:nil];
     
 }
 

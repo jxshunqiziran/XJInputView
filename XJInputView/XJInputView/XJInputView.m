@@ -97,10 +97,10 @@
 
 - (void)setupLayerLineView
 {
-    CALayer *layer = [CALayer layer];
-    layer.frame = CGRectMake(0, self.xj_height-0.5,XJScreenWidth, 0.5);
-    layer.backgroundColor = XJColor(200, 200, 200).CGColor;
-    [self.layer addSublayer:layer];
+//    CALayer *layer = [CALayer layer];
+//    layer.frame = CGRectMake(0, self.xj_height-0.5,XJScreenWidth, 0.5);
+//    layer.backgroundColor = XJColor(200, 200, 200).CGColor;
+//    [self.layer addSublayer:layer];
 }
 
 - (void)switchEnter
@@ -109,12 +109,13 @@
     _faceSelBtn.selected = !_faceSelBtn.selected;
     
     if (_faceSelBtn.selected) {
-        [self.parentView endEditing:YES];
+        [self.contentTextView endEditing:YES];
+         self.faceViewClickBlock();
     }else{
         [self.contentTextView becomeFirstResponder];
     }
     
-    self.faceViewClickBlock();
+   
     
 }
 
@@ -139,7 +140,6 @@
 {
     
     CGSize newSize  = [_contentTextView sizeThatFits:CGSizeMake(XJScreenWidth - 50,MAXFLOAT)];
-    NSLog(@"vvv----%@",NSStringFromCGSize(newSize));
     
     if (newSize.height > maxheight) {
         
