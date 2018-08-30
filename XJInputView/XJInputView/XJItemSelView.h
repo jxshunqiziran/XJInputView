@@ -10,6 +10,8 @@
 #import "XJFaceEmojeView.h"
 #import "XJMulitFuctionView.h"
 #import "XJInputView.h"
+#import "XJChatInputView.h"
+#import "XJToolBarView.h"
 
 typedef NS_ENUM(NSInteger,XJItemSelType){
     XJItemSelTypeInput,          //输入框类型;
@@ -26,7 +28,11 @@ typedef NS_ENUM(NSInteger,XJItemSelType){
 
 @property (nonatomic, strong) XJInputView *inputView;
 
+@property (nonatomic, strong) XJChatInputView *chatInputView;
+
 @property (nonatomic, assign) XJItemSelType itemSelfType;
+
+@property (nonatomic, strong) XJToolBarView *toobarView;
 
 + (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType contentTextView:(UITextView*)contentTextView;
 

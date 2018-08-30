@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger,publishSelType)
     publishSelTypePic,  //图片;
     publishSelTypeScope,//选择权限;
     publishSelTypeLocation,//选择位置;
+    publishSelTypeOtherItem,//选择位置;
 };
 
 @protocol XJItemSelDelegate<NSObject>

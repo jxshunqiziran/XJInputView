@@ -1,37 +1,35 @@
 //
-//  XJInputView.h
-//  XJTemplateProject
+//  XJChatInputView.h
+//  XJInputView
 //
-//  Created by 江鑫 on 2018/8/8.
+//  Created by 江鑫 on 2018/8/30.
 //  Copyright © 2018年 XJ. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "XJFaceEmojeView.h"
 
-#define InputHight 50
-
 #define LINECOLOR [UIColor colorWithHexString:@"#dedede"]
 
 #define maxheight 120
 
-@protocol XJInputViewDelegate<NSObject>
+@protocol XJChatInputViewDelegate<NSObject>
 
-- (void)xjInputViewHeightChanged:(CGFloat)currentHeight;
+- (void)xjChatInputViewHeightChanged:(CGFloat)currentHeight;
 
+- (void)xjOtherItembuttoClick;
 
 @end
 
-
-@interface XJInputView : UIView
+@interface XJChatInputView : UIView
 
 @property (nonatomic, copy) void (^faceViewClickBlock)(void);
 
 @property (nonatomic, strong) UITextView *contentTextView;
 
+@property (nonatomic, assign) id<XJChatInputViewDelegate>delegate;
+
 /*****设置最大行数********/
 @property (nonatomic, assign) NSInteger maxLine;
-
-@property (nonatomic, assign) id<XJInputViewDelegate>delegate;
 
 @end

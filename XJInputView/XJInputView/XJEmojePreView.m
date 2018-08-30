@@ -7,7 +7,7 @@
 //
 
 #import "XJEmojePreView.h"
-#import "XJFaceInputHelper.h"
+#import "XJInputDefine.h"
 
 @interface XJEmojePreView ()
 
@@ -26,7 +26,7 @@
         
         self.backgroundColor = [UIColor clearColor];
         UIImageView *BgimageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        BgimageView.image = [UIImage imageNamed:@"EmoticonTips"];
+        BgimageView.image = GETIMG(@"EmoticonTips");
         [self addSubview:BgimageView];
         
         CGFloat selfW = self.frame.size.width;

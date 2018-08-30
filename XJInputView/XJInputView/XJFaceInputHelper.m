@@ -88,5 +88,11 @@ static XJFaceInputHelper *_faceHelper = nil;
     return imgC;
 }
 
-
+- (UIImage*)getNormalBundleImage:(NSString*)imageNamed;
+{
+    NSString *strResourcesBundle = [[NSBundle mainBundle] pathForResource:@"XJInputView" ofType:@"bundle"];
+    NSString *imgPath= [strResourcesBundle stringByAppendingPathComponent:imageNamed];
+    UIImage *imgC = [UIImage imageWithContentsOfFile:imgPath];
+    return imgC;
+}
 @end

@@ -23,4 +23,6 @@
 
 - (UIImage*)getBundleImage:(NSString*)imageNamed;
 
+- (UIImage*)getNormalBundleImage:(NSString*)imageNamed;
+
 @end
