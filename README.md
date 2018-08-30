@@ -1,4 +1,4 @@
-# XJNewPost
+# XJInputView
 
 ###实现效果
 ##### 发布界面输入框:
