@@ -2,6 +2,7 @@
 仿微博发布界面,包括表情,图文混编,图片选择查看,富文本,@选人,范围选人,图片压缩,缓存
 
 ###效果
+![image](https://github.com/jxshunqiziran/XJInputView/blob/master/newPost.gif)
 
 ### 框架整体介绍
 * [功能介绍](#功能介绍)
