@@ -19,20 +19,6 @@
 		AA8317E8212FF3920020B6A5 /* XJMulitFuctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CA212FF3910020B6A5 /* XJMulitFuctionView.m */; };
 		AA8317E9212FF3920020B6A5 /* XJFaceInputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CB212FF3920020B6A5 /* XJFaceInputHelper.m */; };
 		AA8317EA212FF3920020B6A5 /* XJNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */; };
-		AA8317EB212FF3920020B6A5 /* 文字输入按钮背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */; };
-		AA8317EC212FF3920020B6A5 /* icon_secrecy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */; };
-		AA8317ED212FF3920020B6A5 /* icon_open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D6212FF3920020B6A5 /* icon_open@2x.png */; };
-		AA8317EE212FF3920020B6A5 /* btn_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D7212FF3920020B6A5 /* btn_add@2x.png */; };
-		AA8317EF212FF3920020B6A5 /* IOS会话_表情按钮@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */; };
-		AA8317F0212FF3920020B6A5 /* btn_choose_somebody@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */; };
-		AA8317F1212FF3920020B6A5 /* btn_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */; };
-		AA8317F2212FF3920020B6A5 /* btn_picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */; };
-		AA8317F3212FF3920020B6A5 /* icon_friendVisible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */; };
-		AA8317F4212FF3920020B6A5 /* btn_keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */; };
-		AA8317F5212FF3920020B6A5 /* icon_choose_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */; };
-		AA8317F6212FF3920020B6A5 /* icon_part@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317DF212FF3920020B6A5 /* icon_part@2x.png */; };
-		AA8317F7212FF3920020B6A5 /* icon_Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */; };
-		AA8317F8212FF3920020B6A5 /* icon_invisible@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */; };
 		AA8317F9212FF3920020B6A5 /* XJFaceEmojeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */; };
 		AA8317FA212FF3920020B6A5 /* expression.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8317E3212FF3920020B6A5 /* expression.plist */; };
 		AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */; };
@@ -41,38 +27,12 @@
 		AA831801212FFA260020B6A5 /* UIView+FrameUtilty.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */; };
 		AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831803212FFB540020B6A5 /* UIColor+ZS.m */; };
 		AA831807212FFEEE0020B6A5 /* TestCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */; };
-		AA83180B2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */; };
-		AA83180F2133DC040020B6A5 /* EmotionCustomHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */; };
-		AA8318112133E4260020B6A5 /* EmoticonTips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */; };
 		AA8318142133E4810020B6A5 /* XJEmojePreView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8318132133E4810020B6A5 /* XJEmojePreView.m */; };
 		AA8318162134522C0020B6A5 /* xjemoje1.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA8318152134522C0020B6A5 /* xjemoje1.bundle */; };
-		AA8318392136FB2D0020B6A5 /* sharemore_files@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318242136FB270020B6A5 /* sharemore_files@2x.png */; };
-		AA83183A2136FB2D0020B6A5 /* sharemore_videovoip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318252136FB270020B6A5 /* sharemore_videovoip@2x.png */; };
-		AA83183B2136FB2D0020B6A5 /* sharemore_voiceinput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318262136FB280020B6A5 /* sharemore_voiceinput@2x.png */; };
-		AA83183C2136FB2D0020B6A5 /* sharemore_multitalk@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318272136FB280020B6A5 /* sharemore_multitalk@3x.png */; };
-		AA83183D2136FB2D0020B6A5 /* sharemore_myfav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318282136FB280020B6A5 /* sharemore_myfav@2x.png */; };
-		AA83183E2136FB2D0020B6A5 /* sharemorePay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318292136FB290020B6A5 /* sharemorePay@3x.png */; };
-		AA83183F2136FB2D0020B6A5 /* sharemore_friendcard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182A2136FB290020B6A5 /* sharemore_friendcard@3x.png */; };
-		AA8318402136FB2D0020B6A5 /* sharemore_multitalk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182B2136FB290020B6A5 /* sharemore_multitalk@2x.png */; };
-		AA8318412136FB2D0020B6A5 /* sharemore_myfav@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182C2136FB290020B6A5 /* sharemore_myfav@3x.png */; };
-		AA8318422136FB2D0020B6A5 /* sharemore_location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182D2136FB2A0020B6A5 /* sharemore_location@3x.png */; };
-		AA8318432136FB2D0020B6A5 /* sharemore_friendcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182E2136FB2A0020B6A5 /* sharemore_friendcard@2x.png */; };
-		AA8318442136FB2D0020B6A5 /* sharemore_videovoip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83182F2136FB2A0020B6A5 /* sharemore_videovoip@3x.png */; };
-		AA8318452136FB2D0020B6A5 /* sharemore_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318302136FB2A0020B6A5 /* sharemore_location@2x.png */; };
-		AA8318462136FB2D0020B6A5 /* sharemore_voipvoice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318312136FB2B0020B6A5 /* sharemore_voipvoice@2x.png */; };
-		AA8318472136FB2D0020B6A5 /* sharemore_files@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318322136FB2B0020B6A5 /* sharemore_files@3x.png */; };
-		AA8318482136FB2D0020B6A5 /* sharemore_video@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318332136FB2B0020B6A5 /* sharemore_video@3x.png */; };
-		AA8318492136FB2D0020B6A5 /* sharemore_pic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318342136FB2B0020B6A5 /* sharemore_pic@3x.png */; };
-		AA83184A2136FB2D0020B6A5 /* sharemore_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318352136FB2C0020B6A5 /* sharemore_video@2x.png */; };
-		AA83184B2136FB2D0020B6A5 /* sharemore_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318362136FB2C0020B6A5 /* sharemore_pic@2x.png */; };
-		AA83184C2136FB2D0020B6A5 /* sharemore_voiceinput@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318372136FB2C0020B6A5 /* sharemore_voiceinput@3x.png */; };
-		AA83184D2136FB2D0020B6A5 /* sharemorePay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318382136FB2C0020B6A5 /* sharemorePay@2x.png */; };
-		AA8318542136FBEC0020B6A5 /* ToolViewInputVoice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83184E2136FBEB0020B6A5 /* ToolViewInputVoice@2x.png */; };
-		AA8318552136FBEC0020B6A5 /* ToolViewInputVoiceHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA83184F2136FBEB0020B6A5 /* ToolViewInputVoiceHL@2x.png */; };
-		AA8318562136FBEC0020B6A5 /* ToolViewEmotion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318502136FBEB0020B6A5 /* ToolViewEmotion@2x.png */; };
-		AA8318572136FBEC0020B6A5 /* ToolViewEmotionHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318512136FBEC0020B6A5 /* ToolViewEmotionHL@2x.png */; };
-		AA8318582136FBEC0020B6A5 /* ToolViewKeyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318522136FBEC0020B6A5 /* ToolViewKeyboard@2x.png */; };
-		AA8318592136FBEC0020B6A5 /* ToolViewKeyboardHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA8318532136FBEC0020B6A5 /* ToolViewKeyboardHL@2x.png */; };
+		AA83185C21377B2C0020B6A5 /* XJChatInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA83185B21377B2C0020B6A5 /* XJChatInputView.m */; };
+		AA83185F2137C0640020B6A5 /* XJToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA83185E2137C0640020B6A5 /* XJToolBarView.m */; };
+		AA8318622137C37A0020B6A5 /* TestChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8318612137C37A0020B6A5 /* TestChatViewController.m */; };
+		AA831866213841720020B6A5 /* XJInputView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA831865213841720020B6A5 /* XJInputView.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,20 +81,6 @@
 		AA8317D0212FF3920020B6A5 /* XJMulitFuctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJMulitFuctionView.h; sourceTree = "<group>"; };
 		AA8317D1212FF3920020B6A5 /* XJInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJInputView.h; sourceTree = "<group>"; };
 		AA8317D2212FF3920020B6A5 /* XJFaceInputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJFaceInputHelper.h; sourceTree = "<group>"; };
-		AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文字输入按钮背景@2x.png"; sourceTree = "<group>"; };
-		AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_secrecy@2x.png"; sourceTree = "<group>"; };
-		AA8317D6212FF3920020B6A5 /* icon_open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_open@2x.png"; sourceTree = "<group>"; };
-		AA8317D7212FF3920020B6A5 /* btn_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_add@2x.png"; sourceTree = "<group>"; };
-		AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IOS会话_表情按钮@2x.png"; sourceTree = "<group>"; };
-		AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_choose_somebody@2x.png"; sourceTree = "<group>"; };
-		AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_delete@2x.png"; sourceTree = "<group>"; };
-		AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_picture@2x.png"; sourceTree = "<group>"; };
-		AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_friendVisible@2x.png"; sourceTree = "<group>"; };
-		AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_keyboard@2x.png"; sourceTree = "<group>"; };
-		AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_choose_default@2x.png"; sourceTree = "<group>"; };
-		AA8317DF212FF3920020B6A5 /* icon_part@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_part@2x.png"; sourceTree = "<group>"; };
-		AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Selected@2x.png"; sourceTree = "<group>"; };
-		AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_invisible@2x.png"; sourceTree = "<group>"; };
 		AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJFaceEmojeView.m; sourceTree = "<group>"; };
 		AA8317E3212FF3920020B6A5 /* expression.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expression.plist; sourceTree = "<group>"; };
 		AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJNewPostCollectionViewCell.m; sourceTree = "<group>"; };
@@ -148,39 +94,16 @@
 		AA831803212FFB540020B6A5 /* UIColor+ZS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZS.m"; sourceTree = "<group>"; };
 		AA831805212FFEEE0020B6A5 /* TestCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCommentViewController.h; sourceTree = "<group>"; };
 		AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCommentViewController.m; sourceTree = "<group>"; };
-		AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionsEmojiHL@2x.png"; sourceTree = "<group>"; };
-		AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionCustomHL@2x.png"; sourceTree = "<group>"; };
-		AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmoticonTips@2x.png"; sourceTree = "<group>"; };
 		AA8318122133E4810020B6A5 /* XJEmojePreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJEmojePreView.h; sourceTree = "<group>"; };
 		AA8318132133E4810020B6A5 /* XJEmojePreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJEmojePreView.m; sourceTree = "<group>"; };
 		AA8318152134522C0020B6A5 /* xjemoje1.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xjemoje1.bundle; sourceTree = "<group>"; };
-		AA8318242136FB270020B6A5 /* sharemore_files@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_files@2x.png"; sourceTree = "<group>"; };
-		AA8318252136FB270020B6A5 /* sharemore_videovoip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_videovoip@2x.png"; sourceTree = "<group>"; };
-		AA8318262136FB280020B6A5 /* sharemore_voiceinput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voiceinput@2x.png"; sourceTree = "<group>"; };
-		AA8318272136FB280020B6A5 /* sharemore_multitalk@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_multitalk@3x.png"; sourceTree = "<group>"; };
-		AA8318282136FB280020B6A5 /* sharemore_myfav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_myfav@2x.png"; sourceTree = "<group>"; };
-		AA8318292136FB290020B6A5 /* sharemorePay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemorePay@3x.png"; sourceTree = "<group>"; };
-		AA83182A2136FB290020B6A5 /* sharemore_friendcard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_friendcard@3x.png"; sourceTree = "<group>"; };
-		AA83182B2136FB290020B6A5 /* sharemore_multitalk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_multitalk@2x.png"; sourceTree = "<group>"; };
-		AA83182C2136FB290020B6A5 /* sharemore_myfav@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_myfav@3x.png"; sourceTree = "<group>"; };
-		AA83182D2136FB2A0020B6A5 /* sharemore_location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_location@3x.png"; sourceTree = "<group>"; };
-		AA83182E2136FB2A0020B6A5 /* sharemore_friendcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_friendcard@2x.png"; sourceTree = "<group>"; };
-		AA83182F2136FB2A0020B6A5 /* sharemore_videovoip@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_videovoip@3x.png"; sourceTree = "<group>"; };
-		AA8318302136FB2A0020B6A5 /* sharemore_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_location@2x.png"; sourceTree = "<group>"; };
-		AA8318312136FB2B0020B6A5 /* sharemore_voipvoice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voipvoice@2x.png"; sourceTree = "<group>"; };
-		AA8318322136FB2B0020B6A5 /* sharemore_files@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_files@3x.png"; sourceTree = "<group>"; };
-		AA8318332136FB2B0020B6A5 /* sharemore_video@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_video@3x.png"; sourceTree = "<group>"; };
-		AA8318342136FB2B0020B6A5 /* sharemore_pic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_pic@3x.png"; sourceTree = "<group>"; };
-		AA8318352136FB2C0020B6A5 /* sharemore_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_video@2x.png"; sourceTree = "<group>"; };
-		AA8318362136FB2C0020B6A5 /* sharemore_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_pic@2x.png"; sourceTree = "<group>"; };
-		AA8318372136FB2C0020B6A5 /* sharemore_voiceinput@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voiceinput@3x.png"; sourceTree = "<group>"; };
-		AA8318382136FB2C0020B6A5 /* sharemorePay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemorePay@2x.png"; sourceTree = "<group>"; };
-		AA83184E2136FBEB0020B6A5 /* ToolViewInputVoice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewInputVoice@2x.png"; sourceTree = "<group>"; };
-		AA83184F2136FBEB0020B6A5 /* ToolViewInputVoiceHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewInputVoiceHL@2x.png"; sourceTree = "<group>"; };
-		AA8318502136FBEB0020B6A5 /* ToolViewEmotion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewEmotion@2x.png"; sourceTree = "<group>"; };
-		AA8318512136FBEC0020B6A5 /* ToolViewEmotionHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewEmotionHL@2x.png"; sourceTree = "<group>"; };
-		AA8318522136FBEC0020B6A5 /* ToolViewKeyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewKeyboard@2x.png"; sourceTree = "<group>"; };
-		AA8318532136FBEC0020B6A5 /* ToolViewKeyboardHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolViewKeyboardHL@2x.png"; sourceTree = "<group>"; };
+		AA83185A21377B2C0020B6A5 /* XJChatInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJChatInputView.h; sourceTree = "<group>"; };
+		AA83185B21377B2C0020B6A5 /* XJChatInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJChatInputView.m; sourceTree = "<group>"; };
+		AA83185D2137C0640020B6A5 /* XJToolBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJToolBarView.h; sourceTree = "<group>"; };
+		AA83185E2137C0640020B6A5 /* XJToolBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJToolBarView.m; sourceTree = "<group>"; };
+		AA8318602137C37A0020B6A5 /* TestChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestChatViewController.h; sourceTree = "<group>"; };
+		AA8318612137C37A0020B6A5 /* TestChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChatViewController.m; sourceTree = "<group>"; };
+		AA831865213841720020B6A5 /* XJInputView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XJInputView.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +162,14 @@
 				AA831798212FF32A0020B6A5 /* AppDelegate.m */,
 				AA83179A212FF32A0020B6A5 /* ViewController.h */,
 				AA83179B212FF32A0020B6A5 /* ViewController.m */,
+				AA8317E7212FF3920020B6A5 /* XJNewPostViewController.h */,
+				AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */,
+				AA8317CE212FF3920020B6A5 /* XJNewPostCollectionViewCell.h */,
+				AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */,
 				AA831805212FFEEE0020B6A5 /* TestCommentViewController.h */,
 				AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */,
+				AA8318602137C37A0020B6A5 /* TestChatViewController.h */,
+				AA8318612137C37A0020B6A5 /* TestChatViewController.m */,
 				AA83179D212FF32A0020B6A5 /* Main.storyboard */,
 				AA8317A0212FF3350020B6A5 /* Assets.xcassets */,
 				AA8317A2212FF3350020B6A5 /* LaunchScreen.storyboard */,
@@ -271,10 +200,6 @@
 		AA8317C9212FF3520020B6A5 /* XJInputView */ = {
 			isa = PBXGroup;
 			children = (
-				AA8318102133E4260020B6A5 /* EmoticonTips@2x.png */,
-				AA83180A2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png */,
-				AA83180E2133DC030020B6A5 /* EmotionCustomHL@2x.png */,
-				AA8317E3212FF3920020B6A5 /* expression.plist */,
 				AA8317D3212FF3920020B6A5 /* Resource */,
 				AA8317CC212FF3920020B6A5 /* XJFaceEmojeView.h */,
 				AA8317E2212FF3920020B6A5 /* XJFaceEmojeView.m */,
@@ -288,14 +213,10 @@
 				AA8317E5212FF3920020B6A5 /* XJItemSelView.m */,
 				AA8317D0212FF3920020B6A5 /* XJMulitFuctionView.h */,
 				AA8317CA212FF3910020B6A5 /* XJMulitFuctionView.m */,
-				AA8317CE212FF3920020B6A5 /* XJNewPostCollectionViewCell.h */,
-				AA8317E4212FF3920020B6A5 /* XJNewPostCollectionViewCell.m */,
-				AA831800212FFA260020B6A5 /* UIView+FrameUtilty.h */,
-				AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */,
-				AA831802212FFB540020B6A5 /* UIColor+ZS.h */,
-				AA831803212FFB540020B6A5 /* UIColor+ZS.m */,
-				AA8317E7212FF3920020B6A5 /* XJNewPostViewController.h */,
-				AA8317CD212FF3920020B6A5 /* XJNewPostViewController.m */,
+				AA83185A21377B2C0020B6A5 /* XJChatInputView.h */,
+				AA83185B21377B2C0020B6A5 /* XJChatInputView.m */,
+				AA83185D2137C0640020B6A5 /* XJToolBarView.h */,
+				AA83185E2137C0640020B6A5 /* XJToolBarView.m */,
 				AA8317FE212FF8510020B6A5 /* XJInputDefine.h */,
 			);
 			path = XJInputView;
@@ -304,48 +225,13 @@
 		AA8317D3212FF3920020B6A5 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				AA8318502136FBEB0020B6A5 /* ToolViewEmotion@2x.png */,
-				AA8318512136FBEC0020B6A5 /* ToolViewEmotionHL@2x.png */,
-				AA83184E2136FBEB0020B6A5 /* ToolViewInputVoice@2x.png */,
-				AA83184F2136FBEB0020B6A5 /* ToolViewInputVoiceHL@2x.png */,
-				AA8318522136FBEC0020B6A5 /* ToolViewKeyboard@2x.png */,
-				AA8318532136FBEC0020B6A5 /* ToolViewKeyboardHL@2x.png */,
-				AA8318242136FB270020B6A5 /* sharemore_files@2x.png */,
-				AA8318322136FB2B0020B6A5 /* sharemore_files@3x.png */,
-				AA83182E2136FB2A0020B6A5 /* sharemore_friendcard@2x.png */,
-				AA83182A2136FB290020B6A5 /* sharemore_friendcard@3x.png */,
-				AA8318302136FB2A0020B6A5 /* sharemore_location@2x.png */,
-				AA83182D2136FB2A0020B6A5 /* sharemore_location@3x.png */,
-				AA83182B2136FB290020B6A5 /* sharemore_multitalk@2x.png */,
-				AA8318272136FB280020B6A5 /* sharemore_multitalk@3x.png */,
-				AA8318282136FB280020B6A5 /* sharemore_myfav@2x.png */,
-				AA83182C2136FB290020B6A5 /* sharemore_myfav@3x.png */,
-				AA8318362136FB2C0020B6A5 /* sharemore_pic@2x.png */,
-				AA8318342136FB2B0020B6A5 /* sharemore_pic@3x.png */,
-				AA8318352136FB2C0020B6A5 /* sharemore_video@2x.png */,
-				AA8318332136FB2B0020B6A5 /* sharemore_video@3x.png */,
-				AA8318252136FB270020B6A5 /* sharemore_videovoip@2x.png */,
-				AA83182F2136FB2A0020B6A5 /* sharemore_videovoip@3x.png */,
-				AA8318262136FB280020B6A5 /* sharemore_voiceinput@2x.png */,
-				AA8318372136FB2C0020B6A5 /* sharemore_voiceinput@3x.png */,
-				AA8318312136FB2B0020B6A5 /* sharemore_voipvoice@2x.png */,
-				AA8318382136FB2C0020B6A5 /* sharemorePay@2x.png */,
-				AA8318292136FB290020B6A5 /* sharemorePay@3x.png */,
+				AA831800212FFA260020B6A5 /* UIView+FrameUtilty.h */,
+				AA8317FF212FFA260020B6A5 /* UIView+FrameUtilty.m */,
+				AA831802212FFB540020B6A5 /* UIColor+ZS.h */,
+				AA831803212FFB540020B6A5 /* UIColor+ZS.m */,
+				AA8317E3212FF3920020B6A5 /* expression.plist */,
+				AA831865213841720020B6A5 /* XJInputView.bundle */,
 				AA8318152134522C0020B6A5 /* xjemoje1.bundle */,
-				AA8317D4212FF3920020B6A5 /* 文字输入按钮背景@2x.png */,
-				AA8317D5212FF3920020B6A5 /* icon_secrecy@2x.png */,
-				AA8317D6212FF3920020B6A5 /* icon_open@2x.png */,
-				AA8317D7212FF3920020B6A5 /* btn_add@2x.png */,
-				AA8317D8212FF3920020B6A5 /* IOS会话_表情按钮@2x.png */,
-				AA8317D9212FF3920020B6A5 /* btn_choose_somebody@2x.png */,
-				AA8317DA212FF3920020B6A5 /* btn_delete@2x.png */,
-				AA8317DB212FF3920020B6A5 /* btn_picture@2x.png */,
-				AA8317DC212FF3920020B6A5 /* icon_friendVisible@2x.png */,
-				AA8317DD212FF3920020B6A5 /* btn_keyboard@2x.png */,
-				AA8317DE212FF3920020B6A5 /* icon_choose_default@2x.png */,
-				AA8317DF212FF3920020B6A5 /* icon_part@2x.png */,
-				AA8317E0212FF3920020B6A5 /* icon_Selected@2x.png */,
-				AA8317E1212FF3920020B6A5 /* icon_invisible@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -472,55 +358,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8317EB212FF3920020B6A5 /* 文字输入按钮背景@2x.png in Resources */,
-				AA8318592136FBEC0020B6A5 /* ToolViewKeyboardHL@2x.png in Resources */,
-				AA8317F2212FF3920020B6A5 /* btn_picture@2x.png in Resources */,
 				AA8317FA212FF3920020B6A5 /* expression.plist in Resources */,
-				AA8317F7212FF3920020B6A5 /* icon_Selected@2x.png in Resources */,
-				AA83183C2136FB2D0020B6A5 /* sharemore_multitalk@3x.png in Resources */,
-				AA8318112133E4260020B6A5 /* EmoticonTips@2x.png in Resources */,
-				AA8318572136FBEC0020B6A5 /* ToolViewEmotionHL@2x.png in Resources */,
-				AA8317F8212FF3920020B6A5 /* icon_invisible@2x.png in Resources */,
-				AA8317EE212FF3920020B6A5 /* btn_add@2x.png in Resources */,
-				AA8317F4212FF3920020B6A5 /* btn_keyboard@2x.png in Resources */,
-				AA8318562136FBEC0020B6A5 /* ToolViewEmotion@2x.png in Resources */,
-				AA8317F5212FF3920020B6A5 /* icon_choose_default@2x.png in Resources */,
-				AA8318432136FB2D0020B6A5 /* sharemore_friendcard@2x.png in Resources */,
-				AA83183A2136FB2D0020B6A5 /* sharemore_videovoip@2x.png in Resources */,
-				AA83183B2136FB2D0020B6A5 /* sharemore_voiceinput@2x.png in Resources */,
-				AA83180B2133D50C0020B6A5 /* EmotionsEmojiHL@2x.png in Resources */,
-				AA8317EC212FF3920020B6A5 /* icon_secrecy@2x.png in Resources */,
-				AA8317F3212FF3920020B6A5 /* icon_friendVisible@2x.png in Resources */,
-				AA8318492136FB2D0020B6A5 /* sharemore_pic@3x.png in Resources */,
-				AA8318402136FB2D0020B6A5 /* sharemore_multitalk@2x.png in Resources */,
-				AA8317F0212FF3920020B6A5 /* btn_choose_somebody@2x.png in Resources */,
-				AA8317EF212FF3920020B6A5 /* IOS会话_表情按钮@2x.png in Resources */,
-				AA8317F6212FF3920020B6A5 /* icon_part@2x.png in Resources */,
-				AA83183F2136FB2D0020B6A5 /* sharemore_friendcard@3x.png in Resources */,
-				AA83184B2136FB2D0020B6A5 /* sharemore_pic@2x.png in Resources */,
-				AA8318412136FB2D0020B6A5 /* sharemore_myfav@3x.png in Resources */,
-				AA83184C2136FB2D0020B6A5 /* sharemore_voiceinput@3x.png in Resources */,
-				AA83184A2136FB2D0020B6A5 /* sharemore_video@2x.png in Resources */,
-				AA8318552136FBEC0020B6A5 /* ToolViewInputVoiceHL@2x.png in Resources */,
-				AA8318482136FB2D0020B6A5 /* sharemore_video@3x.png in Resources */,
-				AA8318422136FB2D0020B6A5 /* sharemore_location@3x.png in Resources */,
 				AA8317A4212FF3350020B6A5 /* LaunchScreen.storyboard in Resources */,
+				AA831866213841720020B6A5 /* XJInputView.bundle in Resources */,
 				AA8318162134522C0020B6A5 /* xjemoje1.bundle in Resources */,
-				AA83180F2133DC040020B6A5 /* EmotionCustomHL@2x.png in Resources */,
-				AA8318442136FB2D0020B6A5 /* sharemore_videovoip@3x.png in Resources */,
-				AA83183E2136FB2D0020B6A5 /* sharemorePay@3x.png in Resources */,
-				AA8318472136FB2D0020B6A5 /* sharemore_files@3x.png in Resources */,
-				AA8318462136FB2D0020B6A5 /* sharemore_voipvoice@2x.png in Resources */,
-				AA8318392136FB2D0020B6A5 /* sharemore_files@2x.png in Resources */,
-				AA8317F1212FF3920020B6A5 /* btn_delete@2x.png in Resources */,
 				AA8317A1212FF3350020B6A5 /* Assets.xcassets in Resources */,
-				AA8318452136FB2D0020B6A5 /* sharemore_location@2x.png in Resources */,
-				AA83183D2136FB2D0020B6A5 /* sharemore_myfav@2x.png in Resources */,
 				AA83179F212FF32A0020B6A5 /* Main.storyboard in Resources */,
-				AA8318542136FBEC0020B6A5 /* ToolViewInputVoice@2x.png in Resources */,
-				AA83184D2136FB2D0020B6A5 /* sharemorePay@2x.png in Resources */,
-				AA8318582136FBEC0020B6A5 /* ToolViewKeyboard@2x.png in Resources */,
-				AA8317ED212FF3920020B6A5 /* icon_open@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,12 +430,15 @@
 				AA8317F9212FF3920020B6A5 /* XJFaceEmojeView.m in Sources */,
 				AA8317FD212FF3920020B6A5 /* XJInputView.m in Sources */,
 				AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */,
+				AA8318622137C37A0020B6A5 /* TestChatViewController.m in Sources */,
 				AA8317FC212FF3920020B6A5 /* XJItemSelView.m in Sources */,
+				AA83185C21377B2C0020B6A5 /* XJChatInputView.m in Sources */,
 				AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */,
 				AA8318142133E4810020B6A5 /* XJEmojePreView.m in Sources */,
 				AA83179C212FF32A0020B6A5 /* ViewController.m in Sources */,
 				AA8317A7212FF3350020B6A5 /* main.m in Sources */,
 				AA831799212FF32A0020B6A5 /* AppDelegate.m in Sources */,
+				AA83185F2137C0640020B6A5 /* XJToolBarView.m in Sources */,
 				AA831807212FFEEE0020B6A5 /* TestCommentViewController.m in Sources */,
 				AA8317EA212FF3920020B6A5 /* XJNewPostViewController.m in Sources */,
 				AA8317E8212FF3920020B6A5 /* XJMulitFuctionView.m in Sources */,

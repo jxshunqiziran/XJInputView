@@ -9,6 +9,7 @@
 #ifndef XJInputDefine_h
 #define XJInputDefine_h
 
+#import "XJFaceInputHelper.h"
 #import <Masonry.h>
 #import "UIView+FrameUtilty.h"
 #import "UIColor+ZS.h"
@@ -24,7 +25,7 @@
 
 #define XJScreenHeight (kDevice_Is_iPhoneX ? (MainScreen.size.height - 34):MainScreen.size.height)//排除X底部感应高度  //屏幕高度
 
-#define GETIMG(name) [UIImage imageNamed:name]
+#define GETIMG(name) [[XJFaceInputHelper shareFaceHelper]getNormalBundleImage:name]
 
 #define GETFONT(size) [UIFont systemFontOfSize:size] //字体大小
 

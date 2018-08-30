@@ -152,7 +152,7 @@
     NSMutableArray *emojeKindArray = [XJFaceInputHelper shareFaceHelper].emojeKindsArray;
     for (int i = 0; i < emojeKindArray.count; i++) {
         
-        UIImage *imageNamed = [UIImage imageNamed:emojeKindArray[i]];
+        UIImage *imageNamed = GETIMG(emojeKindArray[i]);
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(40*i, 0, 40, 40);
         [btn setImage:imageNamed forState:UIControlStateNormal];

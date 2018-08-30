@@ -5,6 +5,7 @@
 //  Created by 江鑫 on 2018/8/8.
 //  Copyright © 2018年 XJ. All rights reserved.
 //
+//1,placehoder待添加;
 
 #import "XJInputView.h"
 #import "XJInputDefine.h"
@@ -119,7 +120,13 @@
     
 }
 
-#pragma mark  ------  YYTextViewDelegate --------
+#pragma mark  ------  UITextViewDelegate --------
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    self.faceSelBtn.selected = NO;
+}
 
 - (void)textViewDidChange:(UITextView *)textView
 {
@@ -140,6 +147,7 @@
 {
     
     CGSize newSize  = [_contentTextView sizeThatFits:CGSizeMake(XJScreenWidth - 50,MAXFLOAT)];
+    NSLog(@"vvv-----%@",NSStringFromCGSize(newSize));
     
     if (newSize.height > maxheight) {
         

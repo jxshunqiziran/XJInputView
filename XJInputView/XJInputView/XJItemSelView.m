@@ -9,7 +9,8 @@
 #import "XJItemSelView.h"
 #import "XJInputDefine.h"
 
-@interface XJItemSelView ()<XJInputViewDelegate>
+
+@interface XJItemSelView ()<XJInputViewDelegate,XJChatInputViewDelegate>
 {
     double animationDuration;
     NSNumber *curve;
@@ -47,6 +48,15 @@
             itemSelfView.faceEmojeView.textView = itemSelfView.inputView.contentTextView;
             itemSelfView.faceEmojeView.delegate = itemSelfView.inputView;
             [itemSelfView addSubview:itemSelfView.inputView];
+        }
+            break;
+        case XJItemSelTypeChat:
+        {
+            itemSelfView.xj_top = XJScreenHeight - InputHight - 64;
+            itemSelfView.faceEmojeView.textView = itemSelfView.chatInputView.contentTextView;
+//            itemSelfView.faceEmojeView.delegate = itemSelfView.inputView;
+            [itemSelfView addSubview:itemSelfView.chatInputView];
+            [view addSubview:itemSelfView.toobarView];
         }
             break;
         default:
@@ -113,7 +123,7 @@
 {
     
     animationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
+
     curve = [notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey];
     
 }
@@ -135,20 +145,47 @@
              self.xj_top =  rect.origin.y - showSumHeight - 64;
         }
             break;
+        case XJItemSelTypeChat:{
+             self.xj_top =  rect.origin.y - self.chatInputView.xj_height - 64;
+        }
+            break;
             
         default:
             break;
        
     }
     
-    if (type == publishSelTypeFace) {
-        
-        self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
-        
-    }else{
-        
-        self.faceEmojeView.xj_top = XJScreenHeight;
+    switch (type) {
+        case publishSelTypeFace:
+        {
+            self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
+             self.toobarView.xj_top = XJScreenHeight;
+        }
+            break;
+        case publishSelTypeText:
+        {
+            self.faceEmojeView.xj_top = XJScreenHeight;
+            self.toobarView.xj_top = XJScreenHeight;
+        }
+            break;
+        case publishSelTypeOtherItem:
+        {
+            self.faceEmojeView.xj_top = XJScreenHeight;
+            self.toobarView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
+        }
+            break;
+        default:
+            break;
     }
+    
+//    if (type == publishSelTypeFace) {
+//
+//        self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
+//
+//    }else{
+//
+//        self.faceEmojeView.xj_top = XJScreenHeight;
+//    }
     
     [UIView commitAnimations];
 }
@@ -163,6 +200,15 @@
         _faceEmojeView.backgroundColor = [UIColor redColor];
     }
     return _faceEmojeView;
+}
+
+- (XJToolBarView*)toobarView
+{
+    if (!_toobarView) {
+        _toobarView = [[XJToolBarView alloc]initWithFrame:CGRectMake(0, XJScreenHeight-64, XJScreenWidth, FaceEmojeViewHeight)];
+        _toobarView.backgroundColor = [UIColor redColor];
+    }
+    return _toobarView;
 }
 
 - (XJMulitFuctionView*)mulitFuctionView
@@ -190,6 +236,19 @@
     return _inputView;
 }
 
+- (XJChatInputView*)chatInputView
+{
+    if (!_chatInputView) {
+        _chatInputView = [[XJChatInputView alloc]initWithFrame:CGRectMake(0, 0, XJScreenWidth, InputHight)];
+        _chatInputView.delegate = self;
+        WeakSelf(weakSelf);
+        _chatInputView.faceViewClickBlock = ^{
+            [weakSelf adjustPublishToolsViewFrame:CGRectMake(0, XJScreenHeight-FaceEmojeViewHeight, XJScreenWidth, XJScreenHeight) publishSelType:publishSelTypeFace];
+        };
+    }
+    return _chatInputView;
+}
+
 
 #pragma mark ------  XJInputViewDelegate ------
 
@@ -211,4 +270,27 @@
 
 }
 
+#pragma mark ------  XJInputViewDelegate ------
+- (void)xjChatInputViewHeightChanged:(CGFloat)currentHeight
+{
+    switch (selType) {
+        case publishSelTypeFace:{
+            [self adjustPublishToolsViewFrame:CGRectMake(0, XJScreenHeight-FaceEmojeViewHeight, XJScreenWidth, XJScreenHeight) publishSelType:publishSelTypeFace];
+        }
+            break;
+        case publishSelTypeText:{
+            [self adjustPublishToolsViewFrame:_keyboardRect publishSelType:publishSelTypeText];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (void)xjOtherItembuttoClick;
+{
+     [self adjustPublishToolsViewFrame:CGRectMake(0, XJScreenHeight-FaceEmojeViewHeight, XJScreenWidth, XJScreenHeight) publishSelType:publishSelTypeOtherItem];
+}
 @end

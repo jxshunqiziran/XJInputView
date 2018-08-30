@@ -1,28 +1,28 @@
 //
-//  TestCommentViewController.m
+//  TestChatViewController.m
 //  XJInputView
 //
-//  Created by 江鑫 on 2018/8/24.
+//  Created by 江鑫 on 2018/8/30.
 //  Copyright © 2018年 XJ. All rights reserved.
 //
 
-#import "TestCommentViewController.h"
+#import "TestChatViewController.h"
 #import "XJItemSelView.h"
-@interface TestCommentViewController ()
+
+@interface TestChatViewController ()
 
 @end
 
-@implementation TestCommentViewController
+@implementation TestChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"评论界面";
+    self.navigationItem.title = @"聊天界面";
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    XJItemSelView*inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeInput contentTextView:nil];
-    
+    XJItemSelView*inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeChat contentTextView:nil];
 }
 
 - (void)didReceiveMemoryWarning {

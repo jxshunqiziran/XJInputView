@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "XJNewPostViewController.h"
 #import "TestCommentViewController.h"
+#import "TestChatViewController.h"
 
 @interface ViewController ()
 
@@ -34,6 +35,14 @@
     commentbtn.backgroundColor = [UIColor redColor];
     [commentbtn addTarget:self action:@selector(comment) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:commentbtn];
+    
+    
+    UIButton*chatbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    chatbtn.frame = CGRectMake(100, 300, 100, 40);
+    [chatbtn setTitle:@"聊天界面" forState:UIControlStateNormal];
+    chatbtn.backgroundColor = [UIColor redColor];
+    [chatbtn addTarget:self action:@selector(chat) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:chatbtn];
 }
 
 - (void)comment
@@ -49,6 +58,12 @@
     
 }
 
+- (void)chat
+{
+    TestChatViewController *VC = [[TestChatViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
