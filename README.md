@@ -1,6 +1,6 @@
 # XJNewPost
 
-###效果
+###实现效果
 ##### 发布界面输入框:
 ![image](https://github.com/jxshunqiziran/XJInputView/blob/master/newPost.gif)
 ##### 评论界面输入框:
