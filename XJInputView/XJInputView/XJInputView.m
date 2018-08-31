@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) UIButton *faceSelBtn;
 
+@property (nonatomic, strong) UIView *lineView;
+
 @end
 
 @implementation XJInputView
@@ -27,7 +29,7 @@
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
         [self addSubview:self.contentTextView];
         [self addSubview:self.faceSelBtn];
-        [self setupLayerLineView];
+        [self addSubview:self.lineView];
         
         [self makeConstraint];
         
@@ -51,6 +53,13 @@
         make.right.mas_equalTo(-10);
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
+    }];
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(-0.6);
+        make.right.mas_equalTo(0);
+        make.left.mas_equalTo(0);
+        make.height.mas_equalTo(0.6);
     }];
     
 }
@@ -96,12 +105,13 @@
     return _faceSelBtn;
 }
 
-- (void)setupLayerLineView
+- (UIView*)lineView
 {
-//    CALayer *layer = [CALayer layer];
-//    layer.frame = CGRectMake(0, self.xj_height-0.5,XJScreenWidth, 0.5);
-//    layer.backgroundColor = XJColor(200, 200, 200).CGColor;
-//    [self.layer addSublayer:layer];
+    if (!_lineView) {
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = XJColor(190, 190, 190);
+    }
+    return _lineView;
 }
 
 - (void)switchEnter

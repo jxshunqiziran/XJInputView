@@ -16,11 +16,7 @@
     
     if (self) {
         
-        self.backgroundColor = [UIColor redColor];
-        
-        UIButton *vb = [[UIButton alloc]initWithFrame:self.bounds];
-        vb.backgroundColor = [UIColor redColor];
-        [self addSubview:vb];
+        self.backgroundColor = [UIColor whiteColor];
         
     }
     return self;

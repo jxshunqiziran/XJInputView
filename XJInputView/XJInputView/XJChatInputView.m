@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) UIButton *otherItemBtn;
 
+@property (nonatomic, strong) UIView *lineView;
+
 @end
 
 @implementation XJChatInputView
@@ -32,6 +34,7 @@
         [self addSubview:self.faceSelBtn];
         [self addSubview:self.otherItemBtn];
         [self addSubview:self.audioBtn];
+        [self addSubview:self.lineView];
         
         [self makeConstraint];
         
@@ -55,7 +58,7 @@
         make.top.mas_equalTo(9);
         make.bottom.mas_equalTo(-9);
         make.left.equalTo(self.audioBtn.mas_right).offset(5);
-        make.width.mas_equalTo(XJScreenWidth - 115);
+        make.width.mas_equalTo(XJScreenWidth - 120);
     }];
     
     
@@ -71,6 +74,13 @@
         make.right.mas_equalTo(-10);
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
+    }];
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(-0.6);
+        make.right.mas_equalTo(0);
+        make.left.mas_equalTo(0);
+        make.height.mas_equalTo(0.6);
     }];
     
 }
@@ -108,8 +118,8 @@
 {
     if (!_faceSelBtn) {
         UIButton *faceSelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [faceSelBtn setBackgroundImage:GETIMG(@"ToolViewEmotion") forState:UIControlStateNormal];
-        [faceSelBtn setBackgroundImage:GETIMG(@"ToolViewKeyboard") forState:UIControlStateSelected];
+        [faceSelBtn setBackgroundImage:GETIMG(@"btn_expression_default") forState:UIControlStateNormal];
+        [faceSelBtn setBackgroundImage:GETIMG(@"btn_keyboard") forState:UIControlStateSelected];
         [faceSelBtn addTarget:self action:@selector(switchEnter) forControlEvents:UIControlEventTouchUpInside];
         _faceSelBtn = faceSelBtn;
     }
@@ -120,8 +130,7 @@
 {
     if (!_otherItemBtn) {
         UIButton *otherItemBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [otherItemBtn setBackgroundImage:GETIMG(@"braceletRankAddFollow") forState:UIControlStateNormal];
-        [otherItemBtn setBackgroundImage:GETIMG(@"btn_keyboard") forState:UIControlStateSelected];
+        [otherItemBtn setBackgroundImage:GETIMG(@"btn_more_default") forState:UIControlStateNormal];
         [otherItemBtn addTarget:self action:@selector(otherItem) forControlEvents:UIControlEventTouchUpInside];
         _otherItemBtn = otherItemBtn;
     }
@@ -132,12 +141,21 @@
 {
     if (!_audioBtn) {
         UIButton *audioBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [audioBtn setBackgroundImage:GETIMG(@"ToolViewInputVoice") forState:UIControlStateNormal];
-        [audioBtn setBackgroundImage:GETIMG(@"btn_keyboard") forState:UIControlStateSelected];
+        [audioBtn setBackgroundImage:GETIMG(@"btn_voice") forState:UIControlStateNormal];
+        [audioBtn setBackgroundImage:GETIMG(@"btn_voice") forState:UIControlStateSelected];
         [audioBtn addTarget:self action:@selector(switchEnter) forControlEvents:UIControlEventTouchUpInside];
         _audioBtn = audioBtn;
     }
     return _audioBtn;
+}
+
+- (UIView*)lineView
+{
+    if (!_lineView) {
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = XJColor(190, 190, 190);
+    }
+    return _lineView;
 }
 
 
@@ -162,7 +180,7 @@
 - (void) adjustContentTextViewHeight
 {
     
-    CGSize newSize  = [_contentTextView sizeThatFits:CGSizeMake(XJScreenWidth - 115,MAXFLOAT)];
+    CGSize newSize  = [_contentTextView sizeThatFits:CGSizeMake(XJScreenWidth - 120,MAXFLOAT)];
     NSLog(@"vvv-----%@",NSStringFromCGSize(newSize));
     
     if (newSize.height > maxheight) {

@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger,XJItemSelType){
 
 @property (nonatomic, strong) XJToolBarView *toobarView;
 
+@property (nonatomic, strong) UIView *chatBarCustomView;
+
 + (instancetype)showInputViewInView:(UIView*)view itemSelfType:(XJItemSelType)itemSelfType contentTextView:(UITextView*)contentTextView;
 
 @end

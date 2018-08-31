@@ -18,6 +18,7 @@
     CGRect _keyboardRect;
 }
 
+
 @end
 
 @implementation XJItemSelView
@@ -249,6 +250,13 @@
     return _chatInputView;
 }
 
+- (void) setChatBarCustomView:(UIView *)chatBarCustomView
+{
+    
+    [self.toobarView addSubview:chatBarCustomView];
+    chatBarCustomView.frame = self.toobarView.bounds;
+    
+}
 
 #pragma mark ------  XJInputViewDelegate ------
 

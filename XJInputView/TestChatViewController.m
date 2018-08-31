@@ -8,8 +8,14 @@
 
 #import "TestChatViewController.h"
 #import "XJItemSelView.h"
+#import "XJToolBarScrollView.h"
 
 @interface TestChatViewController ()
+{
+    XJItemSelView*inputView;
+}
+
+@property (nonatomic,strong)XJToolBarScrollView *toolBarScrollView;
 
 @end
 
@@ -22,7 +28,20 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    XJItemSelView*inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeChat contentTextView:nil];
+    inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeChat contentTextView:nil];
+    inputView.chatBarCustomView = self.toolBarScrollView;
+    
+}
+
+- (XJToolBarScrollView*)toolBarScrollView
+{
+    if (!_toolBarScrollView) {
+        _toolBarScrollView = [[XJToolBarScrollView alloc]initWithFrame:inputView.toobarView.bounds];
+        _toolBarScrollView.pagingEnabled = YES;
+        _toolBarScrollView.bounces = NO;
+        _toolBarScrollView.showsHorizontalScrollIndicator = NO;
+    }
+    return _toolBarScrollView;
 }
 
 - (void)didReceiveMemoryWarning {

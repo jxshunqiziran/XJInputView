@@ -33,6 +33,7 @@
 		AA83185F2137C0640020B6A5 /* XJToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA83185E2137C0640020B6A5 /* XJToolBarView.m */; };
 		AA8318622137C37A0020B6A5 /* TestChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8318612137C37A0020B6A5 /* TestChatViewController.m */; };
 		AA831866213841720020B6A5 /* XJInputView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA831865213841720020B6A5 /* XJInputView.bundle */; };
+		AA8318692138CFE50020B6A5 /* XJToolBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8318682138CFE40020B6A5 /* XJToolBarScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		AA8318602137C37A0020B6A5 /* TestChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestChatViewController.h; sourceTree = "<group>"; };
 		AA8318612137C37A0020B6A5 /* TestChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestChatViewController.m; sourceTree = "<group>"; };
 		AA831865213841720020B6A5 /* XJInputView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XJInputView.bundle; sourceTree = "<group>"; };
+		AA8318672138CFE40020B6A5 /* XJToolBarScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XJToolBarScrollView.h; sourceTree = "<group>"; };
+		AA8318682138CFE40020B6A5 /* XJToolBarScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XJToolBarScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				AA831806212FFEEE0020B6A5 /* TestCommentViewController.m */,
 				AA8318602137C37A0020B6A5 /* TestChatViewController.h */,
 				AA8318612137C37A0020B6A5 /* TestChatViewController.m */,
+				AA8318672138CFE40020B6A5 /* XJToolBarScrollView.h */,
+				AA8318682138CFE40020B6A5 /* XJToolBarScrollView.m */,
 				AA83179D212FF32A0020B6A5 /* Main.storyboard */,
 				AA8317A0212FF3350020B6A5 /* Assets.xcassets */,
 				AA8317A2212FF3350020B6A5 /* LaunchScreen.storyboard */,
@@ -432,6 +437,7 @@
 				AA8317FB212FF3920020B6A5 /* XJNewPostCollectionViewCell.m in Sources */,
 				AA8318622137C37A0020B6A5 /* TestChatViewController.m in Sources */,
 				AA8317FC212FF3920020B6A5 /* XJItemSelView.m in Sources */,
+				AA8318692138CFE50020B6A5 /* XJToolBarScrollView.m in Sources */,
 				AA83185C21377B2C0020B6A5 /* XJChatInputView.m in Sources */,
 				AA831804212FFB540020B6A5 /* UIColor+ZS.m in Sources */,
 				AA8318142133E4810020B6A5 /* XJEmojePreView.m in Sources */,
