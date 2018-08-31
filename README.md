@@ -6,6 +6,7 @@
 ##### 评论界面输入框:
 ![image](https://github.com/jxshunqiziran/XJInputView/blob/master/comment.gif)
 ##### 聊天界面输入框:
+![image](https://github.com/jxshunqiziran/XJInputView/blob/master/chat.gif)
 
 ### 框架整体介绍
 * [功能介绍](#功能介绍)
