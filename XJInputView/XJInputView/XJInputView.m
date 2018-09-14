@@ -70,9 +70,6 @@
     if (!_contentTextView) {
         
         UITextView *contentTextView = [[UITextView alloc]init];
-//        contentTextView.placeholderText =  @"请在此评论";
-//        contentTextView.placeholderFont = GETFONT(16);
-//        contentTextView.textColor = contentThemeColor;
         contentTextView.scrollEnabled = NO;
         contentTextView.delegate = self;
         contentTextView.font = GETFONT(16);

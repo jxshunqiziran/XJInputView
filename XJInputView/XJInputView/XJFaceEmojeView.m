@@ -8,9 +8,7 @@
 
 /*待优化:
  1,长按表情展示图片加文字;  显示表情加动画;
- 2,异步加载第一页以后数据;
  3,动图;
- 4,最后发送的文字输出;
  5,参数决定底部选项是否显示;
  6,自己判断是否减去64;
  7,适配iphoneX;
@@ -66,23 +64,13 @@
     [self addSubview:self.pageScrollVeiw];
     [self addSubview:self.pageControl];
     [self addSubview:self.bottomBar];
-    [self.bottomBar addSubview:self.sendBtn];
     [self configToobarView];
-    [self calculteImageHeight];
+    self.imageHeight = [XJFaceInputHelper calculteImageHeight];
 }
 
-- (void)calculteImageHeight
-{
-    
-   UIFont *font = [UIFont systemFontOfSize:17];
-   NSDictionary *dict = @{NSFontAttributeName:font};
-   CGSize maxsize = CGSizeMake(100, MAXFLOAT);
-   CGSize size = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
-  self.imageHeight = size.height;
-    
-}
-
-
+/**
+ 初始化表情试图;
+ */
 - (void) configureEmojeView
 {
 
@@ -96,54 +84,40 @@
         faceBglView.backgroundColor =  XJColor(245, 245, 245);;
         [_pageScrollVeiw addSubview:faceBglView];
         
+        
         NSArray *pageImageNameArray = self.allPageArray[i];
         for (int j = 0;j < pageImageNameArray.count; j++) {
             
-            NSString *imageNamed = pageImageNameArray[j];
-            XJFaceButton *emojeBtn = [XJFaceButton buttonWithType:UIButtonTypeCustom];
-            emojeBtn.indexPath = [NSIndexPath indexPathForRow:j inSection:i];
-            UIImage *emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:self.emojeDic[imageNamed]];
-            if (j == pageImageNameArray.count -1) {
-                emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:imageNamed];
-                emojeBtn.isDleted = YES;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            @autoreleasepool{
+                NSString *imageNamed = pageImageNameArray[j];
+                XJFaceButton *emojeBtn = [XJFaceButton buttonWithType:UIButtonTypeCustom];
+                emojeBtn.indexPath = [NSIndexPath indexPathForRow:j inSection:i];
+                UIImage *emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:self.emojeDic[imageNamed]];
+                if (j == pageImageNameArray.count -1) {
+                    emojeImage = [[XJFaceInputHelper shareFaceHelper] getBundleImage:imageNamed];
+                    emojeBtn.isDleted = YES;
+                }
+                emojeBtn.emjeString = imageNamed;
+                emojeBtn.emjeNamed = self.emojeDic[imageNamed];
+                CGFloat spaceW = (XJScreenWidth-EmojeWH*8-2*20)/7;
+                emojeBtn.frame = CGRectMake(20+j%8*(EmojeWH+spaceW),20+j/8*(EmojeWH+15), EmojeWH, EmojeWH);
+                [emojeBtn addTarget:self action:@selector(clickEmoje:) forControlEvents:UIControlEventTouchUpInside];
+                
+                UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+                [emojeBtn addGestureRecognizer:longPress];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                [faceBglView addSubview:emojeBtn];
+                [emojeBtn setBackgroundImage:emojeImage forState:UIControlStateNormal];
+                
+                });
             }
-            emojeBtn.emjeString = imageNamed;
-            emojeBtn.emjeNamed = self.emojeDic[imageNamed];
-            [emojeBtn setBackgroundImage:emojeImage forState:UIControlStateNormal];
-            CGFloat spaceW = (XJScreenWidth-EmojeWH*8-2*20)/7;
-            emojeBtn.frame = CGRectMake(20+j%8*(EmojeWH+spaceW),20+j/8*(EmojeWH+15), EmojeWH, EmojeWH);
-            [faceBglView addSubview:emojeBtn];
-            [emojeBtn addTarget:self action:@selector(clickEmoje:) forControlEvents:UIControlEventTouchUpInside];
+            });
             
-            UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
-            [emojeBtn addGestureRecognizer:longPress];
         }
     }
     
-    
-    /*富文本实现方案:
-    for (int i = 0; i < allPageArray.count; i++) {
-        YYLabel *facelab = [[YYLabel alloc]initWithFrame:CGRectMake(XJScreenWidth*i+10, 0, XJScreenWidth, self.frame.size.height-40)];
-        facelab.tag = i;
-        facelab.textAlignment = NSTextAlignmentCenter;
-        facelab.backgroundColor = [UIColor whiteColor];
-        facelab.numberOfLines = 0;
-        [_pageScrollVeiw addSubview:facelab];
-        
-        NSMutableAttributedString *attributeText = [NSMutableAttributedString new];
-        NSArray *pageImageNameArray = allPageArray[i];
-        for (NSString *imageNamed in pageImageNameArray) {
-            
-          UIImage *emojeImage = GETIMG(self.emojeDic[imageNamed]);
-//          if (!emojeImage) continue;
-          YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc]initWithImage:emojeImage];
-            
-          NSMutableAttributedString *attachText = [NSMutableAttributedString attachmentStringWithContent:imageView contentMode:UIViewContentModeCenter attachmentSize:CGSizeMake(imageView.size.width+20, imageView.size.height+20) alignToFont:GETFONT(16) alignment:YYTextVerticalAlignmentCenter];
-          [attributeText appendAttributedString:attachText];
-        }
-        facelab.attributedText = attributeText;
-    }
-     */
     
 }
 
@@ -272,7 +246,7 @@
     if (!_bottomBar) {
         _bottomBar = [[UIScrollView alloc]initWithFrame:CGRectMake(0, self.xj_height-BottomBarHeight, XJScreenWidth, BottomBarHeight)];
         _bottomBar.backgroundColor = [UIColor whiteColor];
-//        _bottomBar.backgroundColor = XJColor(236, 237, 241);
+        [_bottomBar addSubview:self.sendBtn];
     }
     return _bottomBar;
 }
@@ -303,20 +277,16 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    
     NSInteger index =  scrollView.contentOffset.x/XJScreenWidth;
     
     _pageControl.currentPage = index;
-    
 }
 
 - (void)actionPage
 {
-    
     _pageScrollVeiw.contentOffset = CGPointMake(_pageControl.currentPage* XJScreenWidth, 0);
     
     [_pageControl setNeedsDisplay];
-    
 }
 
 
@@ -328,7 +298,29 @@
 
 
 
-
+/*富文本实现方案:
+ for (int i = 0; i < allPageArray.count; i++) {
+ YYLabel *facelab = [[YYLabel alloc]initWithFrame:CGRectMake(XJScreenWidth*i+10, 0, XJScreenWidth, self.frame.size.height-40)];
+ facelab.tag = i;
+ facelab.textAlignment = NSTextAlignmentCenter;
+ facelab.backgroundColor = [UIColor whiteColor];
+ facelab.numberOfLines = 0;
+ [_pageScrollVeiw addSubview:facelab];
+ 
+ NSMutableAttributedString *attributeText = [NSMutableAttributedString new];
+ NSArray *pageImageNameArray = allPageArray[i];
+ for (NSString *imageNamed in pageImageNameArray) {
+ 
+ UIImage *emojeImage = GETIMG(self.emojeDic[imageNamed]);
+ //          if (!emojeImage) continue;
+ YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc]initWithImage:emojeImage];
+ 
+ NSMutableAttributedString *attachText = [NSMutableAttributedString attachmentStringWithContent:imageView contentMode:UIViewContentModeCenter attachmentSize:CGSizeMake(imageView.size.width+20, imageView.size.height+20) alignToFont:GETFONT(16) alignment:YYTextVerticalAlignmentCenter];
+ [attributeText appendAttributedString:attachText];
+ }
+ facelab.attributedText = attributeText;
+ }
+ */
 
 //    [self.textView scrollRectToVisible:CGRectMake(0, 0, _textView.contentSize.width, _textView.contentSize.height) animated:NO];
 /*way1:UITextView:

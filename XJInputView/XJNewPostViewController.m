@@ -51,7 +51,7 @@ static NSString *resueNewPostResueID = @"cell";
     
     [self.bgScrollView addSubview:self.picCollectionView];
     
-  XJItemSelView*  _inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeMulitfuntion contentTextView:_contentTextView];
+    XJItemSelView*  _inputView = [XJItemSelView showInputViewInView:self.view itemSelfType:XJItemSelTypeMulitfuntion contentTextView:_contentTextView];
     _inputView.faceEmojeView.delegate = self;
     _inputView.mulitFuctionView.delegate = self;
     

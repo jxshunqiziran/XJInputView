@@ -95,4 +95,16 @@ static XJFaceInputHelper *_faceHelper = nil;
     UIImage *imgC = [UIImage imageWithContentsOfFile:imgPath];
     return imgC;
 }
+
+
++ (CGFloat)calculteImageHeight;
+{
+    
+    UIFont *font = [UIFont systemFontOfSize:17];
+    NSDictionary *dict = @{NSFontAttributeName:font};
+    CGSize maxsize = CGSizeMake(100, MAXFLOAT);
+    CGSize size = [@"/" boundingRectWithSize:maxsize options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
+    return size.height;
+    
+}
 @end

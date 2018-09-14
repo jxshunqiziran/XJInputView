@@ -27,7 +27,6 @@
 {
     
     XJItemSelView *itemSelfView = [[XJItemSelView alloc]initWithFrame:CGRectMake(0, XJScreenHeight, XJScreenWidth, 300)];
-    itemSelfView.backgroundColor = XJColor(236, 237, 241);
     [view addSubview:itemSelfView];
     itemSelfView.itemSelfType = itemSelfType;
     
@@ -44,18 +43,19 @@
             
         case XJItemSelTypeInput:
         {
-          
-            itemSelfView.xj_top = XJScreenHeight - InputHight - 64;
+            itemSelfView.xj_top = XJScreenHeight - InputHight - NavigationHeight;
             itemSelfView.faceEmojeView.textView = itemSelfView.inputView.contentTextView;
             itemSelfView.faceEmojeView.delegate = itemSelfView.inputView;
             [itemSelfView addSubview:itemSelfView.inputView];
         }
             break;
+            
+            
         case XJItemSelTypeChat:
         {
-            itemSelfView.xj_top = XJScreenHeight - InputHight - 64;
+            itemSelfView.xj_top = XJScreenHeight - InputHight - NavigationHeight;
             itemSelfView.faceEmojeView.textView = itemSelfView.chatInputView.contentTextView;
-//            itemSelfView.faceEmojeView.delegate = itemSelfView.inputView;
+
             [itemSelfView addSubview:itemSelfView.chatInputView];
             [view addSubview:itemSelfView.toobarView];
         }
@@ -139,15 +139,15 @@
     
     switch (self.itemSelfType) {
         case XJItemSelTypeInput:{
-             self.xj_top =  rect.origin.y - self.inputView.xj_height - 64;
+             self.xj_top =  rect.origin.y - self.inputView.xj_height - NavigationHeight;
         }
             break;
         case XJItemSelTypeMulitfuntion:{
-             self.xj_top =  rect.origin.y - showSumHeight - 64;
+             self.xj_top =  rect.origin.y - showSumHeight - NavigationHeight;
         }
             break;
         case XJItemSelTypeChat:{
-             self.xj_top =  rect.origin.y - self.chatInputView.xj_height - 64;
+             self.xj_top =  rect.origin.y - self.chatInputView.xj_height - NavigationHeight;
         }
             break;
             
@@ -159,7 +159,7 @@
     switch (type) {
         case publishSelTypeFace:
         {
-            self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
+            self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - NavigationHeight;
              self.toobarView.xj_top = XJScreenHeight;
         }
             break;
@@ -172,21 +172,12 @@
         case publishSelTypeOtherItem:
         {
             self.faceEmojeView.xj_top = XJScreenHeight;
-            self.toobarView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
+            self.toobarView.xj_top = XJScreenHeight - FaceEmojeViewHeight - NavigationHeight;
         }
             break;
         default:
             break;
     }
-    
-//    if (type == publishSelTypeFace) {
-//
-//        self.faceEmojeView.xj_top = XJScreenHeight - FaceEmojeViewHeight - 64;
-//
-//    }else{
-//
-//        self.faceEmojeView.xj_top = XJScreenHeight;
-//    }
     
     [UIView commitAnimations];
 }
@@ -197,7 +188,7 @@
 - (XJFaceEmojeView*)faceEmojeView
 {
     if (!_faceEmojeView) {
-        _faceEmojeView = [[XJFaceEmojeView alloc]initWithFrame:CGRectMake(0, XJScreenHeight-64, XJScreenWidth, FaceEmojeViewHeight)];
+        _faceEmojeView = [[XJFaceEmojeView alloc]initWithFrame:CGRectMake(0, XJScreenHeight, XJScreenWidth, FaceEmojeViewHeight)];
         _faceEmojeView.backgroundColor = [UIColor redColor];
     }
     return _faceEmojeView;
@@ -206,7 +197,7 @@
 - (XJToolBarView*)toobarView
 {
     if (!_toobarView) {
-        _toobarView = [[XJToolBarView alloc]initWithFrame:CGRectMake(0, XJScreenHeight-64, XJScreenWidth, FaceEmojeViewHeight)];
+        _toobarView = [[XJToolBarView alloc]initWithFrame:CGRectMake(0, XJScreenHeight-NavigationHeight, XJScreenWidth, FaceEmojeViewHeight)];
         _toobarView.backgroundColor = [UIColor redColor];
     }
     return _toobarView;

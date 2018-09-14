@@ -25,4 +25,9 @@
 
 - (UIImage*)getNormalBundleImage:(NSString*)imageNamed;
 
+/**
+ 计算表情的宽高;
+ */
++ (CGFloat)calculteImageHeight;
+
 @end

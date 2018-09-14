@@ -29,6 +29,7 @@
 
 @protocol XJFaceEmojeVieDelegate<NSObject>
 
+@optional
 - (void)faceViewClickEmojeString:(NSString*)emjeString emojeNamed:(NSString*)emojeNamed isClickDelete:(BOOL)isDelete;
 
 - (void)faceViewClickHeightChanged;
